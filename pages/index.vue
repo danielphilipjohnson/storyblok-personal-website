@@ -16,21 +16,7 @@ export default {
   layout: "default",
   data() {
     return {
-      story: { content: {} },
-      breadcrumbs: [
-        {
-          url: "https://example.com",
-          text: "top page",
-        },
-        {
-          url: "https://example.com/foo",
-          text: "foo",
-        },
-        {
-          url: "https://example.com/foo/bar",
-          text: "bar",
-        },
-      ],
+      story: { content: {} }
     };
   },
   mounted() {

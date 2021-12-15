@@ -1,0 +1,35 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.img-bg {
+    filter: brightness(0.35);
+    object-fit: cover;
+    width: 100% !important;
+  }
+  
+  .home {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  body {
+    color: #37352f;
+    font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    height: 100%;
+}
+
+
+
+.skill-heading {
+  /* font-weight: 600; */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 1rem 0;
+}
+

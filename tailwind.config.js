@@ -39,7 +39,30 @@ module.exports = {
         badge: "#a1a5e438",
         danger:"#e13557",
         input:"#e1e2eb",
-        hotpurple:"#5b21b6"
+        hotpurple:"#5b21b6",
+        tools:{
+          wordpress:"#21759b",
+          php:"#8993be",
+          tailwind:"#16bfb8",
+          javascript:"#e9a22d",
+          docker:"#0092e7",
+          nuxt:"#48b884",
+          prismic:"#030b39",
+          netlify:"#3aaab8",
+          typescript:"#027bce",
+          mailchimp:"#f5de0f",
+          aws:"#f09213",
+          firebase:"#f58411",
+          vue:"#48b884",
+          vuex:"#344155",
+          bootstrap:"#60458a",
+          algolia:"#5f58ff",
+          react:"#56d3fe",
+          freecodecamp:"#0a0a22",
+          sass:"#c9669c",
+          html:"#d84924",
+          css:"#004b77"
+        }
       },
       spacing: {
         banner: '37rem',

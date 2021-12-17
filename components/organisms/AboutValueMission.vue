@@ -6,7 +6,7 @@
     <div>
       <div class="flex flex-col md:flex-row">
         <section class="w-full xl:w-3/4 xl:mr-8">
-          <p class="mb-2">
+          <p class="mb-2 leading-7">
             I always try to leave the world a better place than yesterday. I try
             to give advice related to programming and personal. I always try 99%
             of the time to help the best I can. If I don't know the answer. I
@@ -19,7 +19,7 @@
             >. I want to help you build apps, websites and programs that express
             your ideas.
           </p>
-          <p class="mb-4">
+          <p class="mb-4 leading-7">
             Currently, I'm finishing off my language studies with the Spanish
             language. I know that speaking and reading in the English language
             is a blessing. Many people do not have access to good programming

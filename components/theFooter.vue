@@ -50,29 +50,36 @@
     </div>
 
     <div class="w-full border-t"></div>
-    <div class="flex justify-between py-4">
-      <div class="flex">
-        <p class="ml-8 font-bold">©2020-2021</p>
+    <div class="mx-auto max-w-screen-xl  grid lg:grid-cols-2 justify-between p-4">
+      <div class="flex mb-4">
+        <p class="lg:ml-8 font-bold">©2020-2021</p>
         <p class="ml-2">Developed by Daniel Philip Johnson</p>
       </div>
       <p>
         Made with
         <a
-          class="mx-1"
-          href="https://www.gatsbyjs.com/"
+          href="https://nuxtjs.org/"
           target="_blank"
           rel="noopener noreferrer"
           style="color: rgb(148, 200, 90)"
-          >#Gatsby.js</a
-        >and
+          >#Nuxt</a>,
+          <a
+          class="mx-1"
+          href="https://www.storyblok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="color: rgb(148, 200, 90)"
+          >#Storyblok</a>
+          
+          and
         <a
           class="mx-1"
           href="https://tailwindcss.com/"
           target="_blank"
           rel="noopener noreferrer"
           style="color: rgb(148, 200, 90)"
-          >#TailwindCSS</a
-        >
+          >#TailwindCSS</a>
+        
       </p>
     </div>
   </footer>
@@ -142,6 +149,12 @@ export default {
           external: false,
           alt: "Work from Daniel Philip Johnson",
         },
+         {
+          link: "/contact/",
+          content: "Contact",
+          external: false,
+          alt: "Contact for Daniel Philip Johnson service",
+        },
       ],
       blogLinks: [
         {
@@ -150,24 +163,24 @@ export default {
           external: false,
           alt: "Blogs from Daniel Philip Johnson",
         },
-        {
-          link: "/categories",
-          content: "Categories",
-          external: false,
-          alt: "All Blogs Categories from Daniel Philip Johnson",
-        },
-        {
-          link: "/series",
-          content: "Series",
-          external: false,
-          alt: "All Blogs Series from Daniel Philip Johnson",
-        },
-        {
-          link: "latest",
-          content: "Latest",
-          external: false,
-          alt: "Latest Blogs from Daniel Philip Johnson",
-        },
+        // {
+        //   link: "/categories",
+        //   content: "Categories",
+        //   external: false,
+        //   alt: "All Blogs Categories from Daniel Philip Johnson",
+        // },
+        // {
+        //   link: "/series",
+        //   content: "Series",
+        //   external: false,
+        //   alt: "All Blogs Series from Daniel Philip Johnson",
+        // },
+        // {
+        //   link: "latest",
+        //   content: "Latest",
+        //   external: false,
+        //   alt: "Latest Blogs from Daniel Philip Johnson",
+        // },
       ],
       projectLinks: [
         {
@@ -176,24 +189,24 @@ export default {
           external: false,
           alt: "Projects from Daniel Philip Johnson",
         },
-        {
-          link: "/javaScript",
-          content: "JavaScript",
-          external: false,
-          alt: "JavaScript projects from Daniel Philip Johnson",
-        },
-        {
-          link: "/react",
-          content: "React",
-          external: false,
-          alt: "React projects from Daniel Philip Johnson",
-        },
-        {
-          link: "/nuxt",
-          content: "Nuxt",
-          external: false,
-          alt: "Nuxt projects from Daniel Philip Johnson",
-        },
+        // {
+        //   link: "/javaScript",
+        //   content: "JavaScript",
+        //   external: false,
+        //   alt: "JavaScript projects from Daniel Philip Johnson",
+        // },
+        // {
+        //   link: "/react",
+        //   content: "React",
+        //   external: false,
+        //   alt: "React projects from Daniel Philip Johnson",
+        // },
+        // {
+        //   link: "/nuxt",
+        //   content: "Nuxt",
+        //   external: false,
+        //   alt: "Nuxt projects from Daniel Philip Johnson",
+        // },
       ],
       externalLinks: [
         {

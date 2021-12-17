@@ -1,5 +1,5 @@
 <template>
-  <p class="pb-2">
+  <p class="pb-2 leading-7">
     {{ content }}
   </p>
 </template>

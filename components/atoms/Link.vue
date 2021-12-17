@@ -20,9 +20,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 .nuxt-link-exact-active {
   @apply border-b-2;
+  @apply pb-1;
 }
 </style>

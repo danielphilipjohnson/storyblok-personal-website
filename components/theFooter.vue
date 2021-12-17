@@ -50,7 +50,7 @@
     </div>
 
     <div class="w-full border-t"></div>
-    <div class="grid lg:grid-cols-2 justify-between p-4">
+    <div class="mx-auto max-w-screen-xl  grid lg:grid-cols-2 justify-between p-4">
       <div class="flex mb-4">
         <p class="lg:ml-8 font-bold">©2020-2021</p>
         <p class="ml-2">Developed by Daniel Philip Johnson</p>

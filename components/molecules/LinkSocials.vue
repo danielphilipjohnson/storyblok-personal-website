@@ -1,22 +1,13 @@
 <template>
   <ul class="flex items-center">
     <li class="mb-2 mr-4" v-for="link in links" :key="link.link">
-      <!-- <External-Link
-        class="text-white"
-        link="https://dev.to/danielphilipjohnson"
-      >
+      <div class="w-6">
         <BaseIcon
-          icon="github"
-          :link="'/github'"
-          accessible_text="link.accessible_text"
+          :icon="link.icon"
+          :link="link.link"
+          :accessible_text="link.alt"
         />
-      </External-Link> -->
-
-      <BaseIcon
-        :icon="link.icon"
-        :link="link.link"
-        :accessible_text="link.alt"
-      />
+      </div>
     </li>
   </ul>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <section class="px-8 max-w-4xl mx-auto mb-16">
+  <section class="px-8 max-w-4xl mx-auto">
     <div class="py-8 border-b border-highlight mb-4">
       <header>
         <h2 class="text-3xl">

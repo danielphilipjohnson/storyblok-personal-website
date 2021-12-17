@@ -5,11 +5,12 @@
     </h2>
 
     <div class="grid lg:grid-cols-2 gap-4 justify-between pb-4">
-      <div v-for="repo in blok.repositories" :key="repo._uid">
+      <div class="contents" v-for="repo in blok.repositories" :key="repo._uid">
         <base-github
           :title="repo.title"
           :introduction="repo.introduction"
           :link="repo.link.url"
+          :path="repo.path"
         />
       </div>
     </div>

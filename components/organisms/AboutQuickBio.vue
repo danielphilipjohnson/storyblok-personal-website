@@ -54,7 +54,7 @@
       </section>
       <div class="flex flex-col md:flex-row mb-8">
         <section class="w-full md:w-9/12 xl:w-3/4 mb-4">
-          <p>
+          <p class="leading-7">
             Span a few years to one year before I started college. I needed to
             buy a PC to submit my assignments. So during the summer of 2008, I
             worked so hard cleaning hotels with my mother. I now had enough

@@ -15,7 +15,7 @@
       >
         <div
           v-if="article.content.External_Link"
-          class="border-grey border rounded"
+          class="border-grey border rounded hover:shadow-md hover:opacity-90 transition duration-300"
         >
           <a
             :href="article.content.External_Link.url"

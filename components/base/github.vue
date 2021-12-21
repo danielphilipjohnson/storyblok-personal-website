@@ -50,9 +50,8 @@
 <script>
 export default {
   props: {
-
       link: {
-        type: Object,
+        type: String,
         required: true,
       },
       title: {

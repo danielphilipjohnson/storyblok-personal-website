@@ -1,6 +1,8 @@
 <template>
   <div :class="classes">
-    <Heading tag="h2" :content="title" />
+    <h2 class="mr-8 uppercase text-sm font-bold text-light-gray mb-2">
+      {{ title }}
+    </h2>
     <Link-List :links="links" />
   </div>
 </template>
@@ -9,7 +11,7 @@
 export default {
   props: {
     classes: {
-       type: String,
+      type: String,
       required: true,
     },
     title: {

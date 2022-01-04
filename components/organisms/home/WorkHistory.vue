@@ -1,5 +1,5 @@
 <template>
-  <section class="px-8 max-w-4xl mx-auto">
+  <section class="max-w-4xl px-8 mx-auto md:px-0">
     <h2 class="text-2xl font-bold text-purple skill-heading">
       {{ blok.heading }}
     </h2>
@@ -12,6 +12,8 @@
             width="72"
             height="72"
             provider="storyblok"
+            format="webp"
+            quality="80"
             :src="job.logo.filename"
             :alt="job.logo.alt"
           />
@@ -37,7 +39,7 @@
         
         <base-blockquote class="italic" :text="job.excerpt"/> 
 
-        <div v-for="p in job.Paragraph" :key="p._uid">
+        <div v-for="p in job.Paragraph" :key="p._uid" class="leading-loose">
           <storyblokRichText :text="p.text" />
         </div>       
       </li>

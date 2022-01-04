@@ -1,5 +1,5 @@
 <template>
-  <section class="px-8 max-w-4xl mx-auto">
+  <section class="max-w-4xl px-8 mx-auto md:px-0">
     <h2 class="text-2xl font-extrabold text-purple skill-heading">
       {{ blok.Heading }}
     </h2>
@@ -10,14 +10,16 @@
             <NuxtImg
               height="75"
               width="75"
-               class="course-logo p-2 mr-2"
+              format="webp"
+              quality="80"
+              class="p-2 mr-2 course-logo"
               provider="storyblok"
               :src="course.Logo.filename"
               :alt="course.Logo.alt"
             />
           </picture>
         </div>
-        <div class="course-content col-span-2">
+        <div class="col-span-2 course-content">
           <h3 class="course-title">
             {{ course.Title }}
           </h3>
@@ -30,7 +32,7 @@
             </span>
           </p>
           <a
-            class="btn-certificate flex w-max"
+            class="flex btn-certificate w-max"
             :href="course.Certificate_Link.url"
           >
             <svg

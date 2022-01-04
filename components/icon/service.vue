@@ -111,15 +111,7 @@ export default {
     icon: {
       type: String,
       required: true,
-    },
-    link: {
-      type: String,
-      required: true,
-    },
-    accessible_text: {
-      type: String,
-      required: true,
-    },
+    }
   },
 };
 </script>

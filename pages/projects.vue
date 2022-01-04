@@ -7,15 +7,15 @@
       :is="story.content.component"
     />
 
-    <div class="mb-8 max-w-6xl mx-auto px-8 flex flex-wrap items-start">
+    <div class="flex flex-wrap items-start max-w-6xl px-8 mx-auto mb-8">
       <div
-        class="w-full lg:w-1/2 lg:pr-8 pb-8"
+        class="w-full pb-8 lg:w-1/2 lg:pr-8"
         v-for="article in articles"
         :key="article._uid"
       >
         <div
           v-if="article.content.External_Link"
-          class="border-grey border rounded hover:shadow-md hover:opacity-90 transition duration-300"
+          class="transition duration-300 border rounded border-grey hover:shadow-md hover:opacity-90"
         >
           <a
             :href="article.content.External_Link.url"
@@ -28,7 +28,7 @@
                 focusable="false"
                 data-prefix="fab"
                 data-icon="firefox"
-                class="svg-inline--fa fa-firefox w-16"
+                class="w-16 svg-inline--fa fa-firefox"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -42,33 +42,23 @@
               <span class="top__bar-title">Tribute Page</span>
             </div>
             <figure
-              class="
-                relative
-                h-full
-                flex flex-col
-                justify-between
-                border-gray
-                shadow-sm
-              "
+              class="relative flex flex-col justify-between h-full shadow-sm border-gray"
             >
               <nuxt-picture
-                class="relative h-full flex flex-col justify-between"
+                class="relative flex flex-col justify-between h-full"
                 provider="storyblok"
+                width="760"
+                height="400"
+                format="webp"
+                :alt="article.content.Background_Image.alt"
                 :src="article.content.Background_Image.filename"
               />
             </figure>
           </a>
 
-          <figcaption class="px-4 pt-3 md:pt-4 flex flex-col">
+          <figcaption class="flex flex-col px-4 pt-3 md:pt-4">
             <h2
-              class="
-                flex flex-wrap
-                items-center
-                text-xl
-                md:text-3xl md:pb-2
-                pb-1
-                break-all
-              "
+              class="flex flex-wrap items-center pb-1 text-xl break-all md:text-3xl md:pb-2"
             >
               {{ article.name }}
             </h2>
@@ -79,261 +69,121 @@
               <div v-for="logo in article.content.Built_With" :key="logo._uid">
                 <div v-if="logo.Text.toLowerCase() == 'php'">
                   <span
-                    class="
-                      bg-tools-php
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-php"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'wordpress'">
                   <span
-                    class="
-                      bg-tools-wordpress
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-wordpress"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'tailwind'">
                   <span
-                    class="
-                      bg-tools-tailwind
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-tailwind"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'javascript'">
                   <span
-                    class="
-                      bg-tools-javascript
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-javascript"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'docker'">
                   <span
-                    class="
-                      bg-tools-docker
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-docker"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'nuxt'">
                   <span
-                    class="
-                      bg-tools-nuxt
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-nuxt"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'prismic'">
                   <span
-                    class="
-                      bg-tools-prismic
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-prismic"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'netlify'">
                   <span
-                    class="
-                      bg-tools-netlify
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-netlify"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'typescript'">
                   <span
-                    class="
-                      bg-tools-typescript
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-typescript"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'mailchimp'">
                   <span
-                    class="
-                      bg-tools-mailchimp
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-mailchimp"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'aws'">
                   <span
-                    class="
-                      bg-tools-aws
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-aws"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'vue'">
                   <span
-                    class="
-                      bg-tools-vue
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-vue"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'vuex'">
                   <span
-                    class="
-                      bg-tools-vuex
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-vuex"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'bootstrap'">
                   <span
-                    class="
-                      bg-tools-bootstrap
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-bootstrap"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'algolia'">
                   <span
-                    class="
-                      bg-tools-algolia
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-algolia"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'firebase'">
                   <span
-                    class="
-                      bg-tools-firebase
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-firebase"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'html'">
                   <span
-                    class="
-                      bg-tools-html
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-html"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'css'">
                   <span
-                    class="
-                      bg-tools-css
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-css"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else-if="logo.Text.toLowerCase() == 'sass'">
                   <span
-                    class="
-                      bg-tools-sass
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-sass"
                     >{{ logo.Text }}</span
                   >
                 </div>
                 <div v-else>
                   <span
-                    class="
-                      bg-secondary
-                      text-xs text-white
-                      rounded
-                      px-2
-                      py-1
-                      mr-1
-                    "
+                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-secondary"
                     >{{ logo.Text }}</span
                   >
                 </div>
@@ -468,15 +318,26 @@ export default {
   head() {
     const { title, description } = this.story.content.metadata;
     const seoImage = this.story.content.seoImage;
+    const url = this.$config.BASE_URL + this.$route.path;
 
     return {
+      link: [
+        {
+          rel: "canonical",
+          href: url,
+        },
+      ],
       title,
-      meta: createSEOMeta({ title, description, image: seoImage.filename }),
+      meta: createSEOMeta({
+        title,
+        description,
+        image: seoImage.filename,
+        url,
+      }),
     };
   },
 };
 </script>
-
 
 <style scoped>
 .top__bar {

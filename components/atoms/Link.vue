@@ -1,7 +1,7 @@
 <template>
-  <nuxt-link :to="link">
+  <nuxt-link :to="link" class="hover:text-blue-600">
     {{ content }}
-     <slot></slot>
+    <slot></slot>
   </nuxt-link>
 </template>
 
@@ -15,15 +15,15 @@ export default {
     content: {
       type: String,
       required: true,
-    }
+    },
   },
-}
+};
 </script>
 
 <style>
-
-.nuxt-link-exact-active {
-  @apply border-b-2;
-  @apply pb-1;
+.nav-links .nuxt-link-exact-active {
+  @apply px-2 py-1;
+  background: rgba(55, 53, 47, 0.1);
+  border-radius: 5px;
 }
 </style>

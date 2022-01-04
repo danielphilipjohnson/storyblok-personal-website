@@ -5,31 +5,37 @@
         <NuxtImg
           class="w-full"
           provider="storyblok"
+          format="webp"
+          quality="80"
           :src="blok.Background_Image.filename"
           :alt="blok.Background_Image.alt"
+          role="presentation"
         />
       </div>
-      <div class="mx-auto px-8 max-w-6xl project">
+      <div class="max-w-6xl px-8 mx-auto mb-4">
         <span
-          class="profile-card-image profile-emoji mb-2"
+          class="relative z-10 px-5 py-4 text-4xl bg-white border-4 border-white rounded-full profile-card-image bottom-8"
           role="img"
           aria-label="project icon"
           >🖥️</span
         >
       </div>
     </div>
-    <div class="px-8 max-w-6xl mx-auto mb-8">
-      <h1 class="text-purple page-heading lg-heading border-b border-grey">
+    <div class="max-w-6xl px-8 mx-auto mb-8">
+      <h1 class="pb-4 mb-4 text-5xl font-bold capitalize border-b text-dark border-grey">
         {{ blok.heading }}
       </h1>
       <div
-        class="mb-8 flex items-center bg-badge p-3 rounded border border-grey"
+        class="flex items-center p-3 mb-8 border rounded bg-badge border-grey"
       >
-      <div class="text-sm leading-7" v-for="p in blok.Highlight" :key="p._uid">
-          <span class="font-bold"> {{p.Heading}} </span>
+        <div
+          class="text-sm leading-7"
+          v-for="p in blok.Highlight"
+          :key="p._uid"
+        >
+          <span class="font-bold"> {{ p.Heading }} </span>
           <storyblokRichText :text="p.Text" />
         </div>
-       
       </div>
     </div>
   </section>
@@ -44,21 +50,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.profile-emoji {
-    background-color: #fff;
-    bottom: -30px;
-    font-size: 3rem;
-    padding: 1rem 1.25rem;
-}
-.profile-card-image {
-    border: 3px solid #fff;
-    border-radius: 50%;
-    bottom: 50px;
-    height: 75px;
-    position: relative;
-    width: auto;
-    z-index: 2;
-}
-</style>

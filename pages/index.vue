@@ -6,33 +6,24 @@
       :blok="story.content"
       :is="story.content.component"
     />
-    <section class="bio border-t border-grey" aria-label="Lets connect">
+    <section class="border-t bio border-grey" aria-label="Lets connect">
       <div class="container pt-16 pb-16">
         <div class="text-center">
-          <h2 class="text-2xl font-bold mb-2">
+          <h2 class="mb-2 text-2xl font-bold">
             Want to learn more? Lets connect!
           </h2>
-          <p class="text-xl mb-12">
+          <p class="mb-12 text-xl">
             I’d love to chat about new opportunities or anything design related!
           </p>
           <a
-            class="
-              bg-purple-500
-              font-bold
-              text-white
-              rounded
-              tracking-wide
-              px-24
-              py-4
-              my-12
-            "
+            class="px-24 py-4 my-12 font-bold tracking-wide text-white bg-purple-500 rounded "
             href="/contact"
           >
             Contact</a
           >
           <div>
             <ul class="flex justify-center py-16 text-2xl">
-              <li class="mx-3 bg-highlight p-4 rounded-full">
+              <li class="p-4 mx-3 rounded-full bg-highlight">
                 <a
                   class="text-purple-500"
                   href="https://www.linkedin.com/in/daniel-philip-johnson/"
@@ -56,7 +47,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="mx-3 bg-highlight p-4 rounded-full">
+              <li class="p-4 mx-3 rounded-full bg-highlight">
                 <a
                   class="text-purple-500"
                   href="https://twitter.com/danielp_johnson"
@@ -80,7 +71,7 @@
                     ></path></svg
                 ></a>
               </li>
-              <li class="mx-3 bg-highlight p-4 rounded-full">
+              <li class="p-4 mx-3 rounded-full bg-highlight">
                 <a
                   class="text-purple-500"
                   href="https://www.instagram.com/danielphilipjohnson/"
@@ -104,7 +95,7 @@
                   </svg>
                 </a>
               </li>
-              <li class="mx-3 bg-highlight p-4 rounded-full">
+              <li class="p-4 mx-3 rounded-full bg-highlight">
                 <a
                   class="text-purple-500"
                   href="https://www.youtube.com/c/DanielPhilipJohnson/"
@@ -248,10 +239,22 @@ export default {
   head() {
     const { title, description } = this.story.content.metadata;
     const seoImage = this.story.content.seoImage;
+    const url = this.$config.BASE_URL + this.$route.path;
 
     return {
+      link: [
+        {
+          rel: "canonical",
+          href: url,
+        },
+      ],
       title,
-      meta: createSEOMeta({ title, description, image: seoImage.filename }),
+      meta: createSEOMeta({
+        title,
+        description,
+        image: seoImage.filename,
+        url,
+      }),
     };
   },
 };

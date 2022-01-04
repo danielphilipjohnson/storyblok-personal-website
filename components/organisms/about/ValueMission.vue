@@ -1,6 +1,6 @@
 <template>
-  <article class="px-8 max-w-4xl mx-auto" aria-label="my values and missions">
-    <h2 class="text-2xl font-bold mb-4 pb-4 border-b border-grey">
+  <article class="max-w-4xl px-8 mx-auto" aria-label="my values and missions">
+    <h2 class="pb-4 mb-4 text-2xl font-bold border-b border-grey">
       <span role="img" aria-label="trophy">🏆</span> My values and mission
     </h2>
     <div>
@@ -37,28 +37,22 @@
             who desire to program can do it.
           </p>
         </section>
-        <section class="w-full md:w-2/4 xl:w-1/4 pr-8">
-          <figure>
+        <section class="w-full pr-8 md:w-2/4 xl:w-1/4">
+          <figure class="mb-4">
             <div
-              data-gatsby-image-wrapper=""
-              class="
-                gatsby-image-wrapper gatsby-image-wrapper-constrained
-                pr-4
-                object-fit
-              "
+              class="pr-4 object-fit"
             >
               <div style="max-width: 500px; display: block">
-                <img
-                  alt=""
-                  role="presentation"
-                  aria-hidden="true"
-                  src="https://www.danielphilipjohnson.com/static/ca649e62b442a64687c9ea2617c4fb6b/ad91a/profile1.jpg"
-                  style="max-width: 100%; display: block; position: static"
+                <NuxtImg
+                  alt="Daniel Johnson wearing a purple face mask on his first day to work"
+                  src="first-day-fullstack.jpg"
+                  format="webp"
+                  quality="80"
                 />
               </div>
             </div>
             <figcaption
-              class="text-center py-2 text-xs text-gray mb-12 xl:mb-2"
+              class="py-2 mb-12 text-xs text-center text-gray xl:mb-2"
             >
               My first day as a FullStack engineer
             </figcaption>

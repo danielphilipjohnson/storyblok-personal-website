@@ -1,12 +1,12 @@
 <template>
-  <section class="px-8 max-w-4xl mx-auto">
-    <h2 class="text-2xl font-bold text-purple skill-heading mb-4">
+  <section class="max-w-4xl px-8 mx-auto md:px-0">
+    <h2 class="mb-4 text-2xl font-bold text-purple skill-heading">
       {{ blok.heading }}
     </h2>
 
-    <div class="grid lg:grid-cols-2 gap-4 justify-between pb-4">
+    <div class="grid justify-between gap-4 pb-4 lg:grid-cols-2">
       <div class="contents" v-for="repo in blok.repositories" :key="repo._uid">
-        <base-github
+        <repo
           :title="repo.title"
           :introduction="repo.introduction"
           :link="repo.link.url"

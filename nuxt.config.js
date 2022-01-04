@@ -18,6 +18,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  publicRuntimeConfig: {
+    BASE_URL: process.env.BASE_URL || 'www.danielphilipjohnson.com',
+  },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -58,12 +61,14 @@ export default {
         accessToken: "8OqVvKidf8MtqBrCJeyLqAtt",
       },
       '@nuxtjs/sitemap',
+      '@nuxt/image',
     ],
   ],
   image: {
     storyblok: {
       baseURL: 'https://img2.storyblok.com'
-    }
+    },
+    dir: 'assets/img'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

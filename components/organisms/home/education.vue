@@ -1,21 +1,25 @@
 <template>
-  <section id="education" class="px-8 max-w-4xl mx-auto">
+  <section id="education" class="max-w-4xl px-8 mx-auto md:px-0">
     <h2 class="text-2xl font-extrabold text-purple skill-heading">
       {{ blok.Heading }}
     </h2>
     <ul class="work-experience">
-      <li class="job-current" v-for="education in blok.Education">
+      <li
+        class="job-current"
+        v-for="education in blok.Education"
+        :key="education._uid"
+      >
         <div class="flex items-center mb-3">
           <div class="border-2 border-highlight">
-            <picture>
-              <img
-                layout="fixed"
-                width="72"
-                height="72"
-                :src="education.School_Logo.filename"
-                :alt="education.School_Logo.alt"
-                style="object-fit: cover; opacity: 1"
-            /></picture>
+            <NuxtImg
+              :src="education.School_Logo.filename"
+              :alt="education.School_Logo.alt"
+              width="72"
+              height="72"
+              format="webp"
+              quality="80"
+              provider="storyblok"
+            />
           </div>
           <header class="ml-4 leading-normal">
             <h3 class="text-lg font-extrabold">
@@ -27,18 +31,17 @@
                 href="https://www.plymouth.ac.uk/courses/undergraduate/bsc-psychology"
                 target="_blank"
                 rel="noopener noreferrer"
-                >{{ education.school }}</a
+                >{{ education.School }}</a
               >
             </h4>
-
-            <h5 class="font-italic"></h5>
+            <h5 class="font-italic">{{ education.Date_Graduated }}</h5>
           </header>
         </div>
 
-        <ul class="job-description mb-4">
-          <div v-for="p in education.Paragraphs" :key="p._uid">
+        <ul class="mb-4 leading-loose job-description rich-text">
+          <li v-for="p in education.Paragraphs" :key="p._uid">
             <storyblokRichText :text="p.text" />
-          </div>
+          </li>
         </ul>
       </li>
     </ul>
@@ -54,9 +57,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.svg-inline--fa.fa-w-20 {
-  width: 1.25em;
-}
-</style>

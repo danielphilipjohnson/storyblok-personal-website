@@ -1,46 +1,45 @@
 <template>
-  <main >
+  <main>
     <div class="about-info">
-      <div class="profile-card">
-        <div class="profile-card-head">
-          <div class="card-head-bg">
-            <img
-            class="w-full"
-              src="https://www.danielphilipjohnson.com/static/42fc619d09c117d04f5874db98396e55/c0392/linkedinBanner.png"
-              alt=""
-            />
-          </div>
+      <div class="relative z-0 w-full" style="z-index: -99">
+        <div class="card-head-bg">
+          <NuxtImg
+            class="object-cover w-full"
+            src="linkedinBanner.png"
+            alt="linkedin banner"
+            format="webp"
+            width="1680"
+            height="600"
+            role="presentation"
+          />
         </div>
-        <div class="px-8 max-w-4xl mx-auto">
-          <img
-            class="profile-card-image"
-            src="https://www.danielphilipjohnson.com/static/90ff2d9e23d36ceb0d775bc4d2fb48f5/643ff/profile.webp"
-            alt=""
+      </div>
+      <div class="z-50 bg-white lg:-mt-52">
+        <div class="max-w-4xl px-8 mx-auto">
+          <NuxtImg
+            class="relative z-10 w-32 h-32 border-2 border-white rounded-full bottom-12"
+            src="profile.jpg"
+            alt="Daniel Philip Johnson"
+            role="presentation"
+            width="100"
+            height="100"
+            format="webp"
+            quality="80"
           />
 
           <div class="profile-card-body">
-            <Heading tag="h1" content="Daniel Philip Johnson" />
+            <Heading class="-my-6" tag="h1" content="Daniel Philip Johnson" />
 
-            <div class="grid lg:grid-cols-2 gap-4 justify-between mb-3">
+            <div class="grid justify-between gap-4 mb-3 lg:grid-cols-2">
               <header>
-                <h2 class="text-2xl font-bold mb-1">Full-stack developer</h2>
-                <h3 class="text-sm text-light-gray">
+                <h2 class="mb-1 text-2xl font-bold">Full-stack developer</h2>
+                <h3 class="text-sm text-gray">
                   👨&zwj;💻 I work remote 🏠 in Cornwall
                 </h3>
               </header>
-              <div class="w-full flex lg:justify-end mb-3">
+              <div class="flex w-full mb-3 lg:justify-end">
                 <div
-                  class="
-                    w-max
-                    flex
-                    items-center
-                    bg-badge
-                    h-8
-                    px-3
-                    py-4
-                    rounded
-                    border border-grey
-                  "
+                  class="flex items-center h-8 px-3 py-4 border rounded w-max bg-badge border-grey"
                 >
                   <img
                     src="https://img.icons8.com/ios/20/000000/resume.png"
@@ -48,6 +47,8 @@
                     width="20"
                     height="20"
                     class="mr-2"
+                    format="webp"
+                    quality="80"
                   /><a
                     class="text-sm"
                     href="/static/Daniel_Philip_Johnson_Front_End_Engineer-afc8e0c1b966394ae65c1dbd9697fd63.pdf"
@@ -61,7 +62,7 @@
               My personal goal is to help others get their first programming job
               and work my way towards becoming a senior.
             </p>
-            <ul class="space-y-3 list-disc ml-8 mb-8">
+            <ul class="mb-8 ml-8 space-y-3 list-disc">
               <li>😄 Pronouns: Him, he, they</li>
               <li>📌 Cornwall 🏴󠁧󠁢󠁥󠁮󠁧󠁿</li>
               <li>🎓 Bsc Psychology | University of Plymouth 🏫</li>
@@ -70,15 +71,7 @@
               <li>🔭 In my spare time I build linux from scratch</li>
             </ul>
             <div
-              class="
-                mb-8
-                flex
-                items-center
-                bg-badge
-                p-6
-                rounded
-                border border-grey
-              "
+              class="flex items-center p-6 mb-8 border rounded bg-badge border-grey"
             >
               <p class="text-sm leading-7">
                 ⚡ <span class="font-bold">Fun fact:</span> I started
@@ -95,20 +88,19 @@
         </div>
       </div>
     </div>
-    <section class="px-8 max-w-4xl mx-auto">
+    <section class="max-w-4xl px-8 mx-auto">
       <Header />
     </section>
-
-    <section class="px-8 max-w-4xl mx-auto">
+    <section class="max-w-4xl px-8 mx-auto">
       <header>
-        <h2 class="font-bold">Current Focus:</h2>
+        <h2 class="mb-2 font-bold">Current Focus:</h2>
       </header>
 
       <Highlight
         emoji="⚡"
         content="// Accessibility // React // Performance // Responsive"
       />
-      <header><h2 class="font-bold">Technologies:</h2></header>
+      <header><h2 class="mb-2 font-bold">Technologies:</h2></header>
       <Highlight
         emoji="⚡"
         content="React, Next, Vue, Nuxt,
@@ -133,15 +125,6 @@
 </template>
 
 <style scoped>
-.profile-card-image {
-  border: 3px solid #fff;
-  border-radius: 50%;
-  bottom: 50px;
-  height: 75px;
-  position: relative;
-  width: auto;
-  z-index: 2;
-}
 .bio-content,
 .bio-name {
   margin-bottom: 1rem;
@@ -153,15 +136,9 @@
   }
 }
 
-
-
-
 .about {
-    background-color: #fff;
-    color: #4f4f4f;
-    letter-spacing: -.028px;
-    line-height: 1.58;
-    text-align: left;
+  letter-spacing: -0.028px;
+  line-height: 1.58;
 }
 </style>
 
@@ -170,7 +147,6 @@
 import { createSEOMeta } from "../utils/seo";
 export default {
   async asyncData(context) {
-
     const { story } = await context.app.$storyapi
       .get("cdn/stories/about", {
         version: "draft",
@@ -277,10 +253,22 @@ export default {
   head() {
     const { title, description } = this.story.content.metadata;
     const seoImage = this.story.content.seoImage;
+    const url = this.$config.BASE_URL + this.$route.path;
 
     return {
+      link: [
+        {
+          rel: "canonical",
+          href: url,
+        },
+      ],
       title,
-      meta: createSEOMeta({ title, description, image: seoImage.filename }),
+      meta: createSEOMeta({
+        title,
+        description,
+        image: seoImage.filename,
+        url,
+      }),
     };
   },
 };

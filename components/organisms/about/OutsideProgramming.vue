@@ -1,9 +1,9 @@
 <template>
   <article
-    class="px-8 max-w-4xl mx-auto"
+    class="max-w-4xl px-8 mx-auto"
     aria-label="what i do outside of programming"
   >
-    <h2 class="text-2xl font-bold mb-4 pb-4 border-b border-grey">
+    <h2 class="pb-4 mb-4 text-2xl font-bold border-b border-grey">
       <span role="img" aria-label="thunder">⚡</span> OUTSIDE OF PROGRAMMING
     </h2>
     <div>

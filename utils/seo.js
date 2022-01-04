@@ -1,8 +1,8 @@
 export const createSEOMeta = (data) => [
     { hid: 'og:title', property: 'og:title', content: data.title },
-    { hid: 'og:publish_date', property: 'og:publish_date', content: Date.now() },
-    { hid: 'og:type', property: 'og:type', content: "website" },
-    { hid: 'og:site_name', property: 'og:site_name', content: "Daniel PHilip Johnson" },
+    { hid: 'og:publish_date', property: 'og:publish_date', content: data.publish_date || Date.now() },
+    { hid: 'og:type', property: 'og:type', content: data.type || "website" },
+    { hid: 'og:site_name', property: 'og:site_name', content: "Daniel Philip Johnson" },
     
     { hid: 'description', name: 'description', content: data.description },
     {
@@ -14,7 +14,7 @@ export const createSEOMeta = (data) => [
     {
       hid: 'og:url',
       property: 'og:url',
-      content: process.env.HOST_NAME + '/' + data.url,
+      content: data.url,
     },
     {
       hid: 'twitter:card',

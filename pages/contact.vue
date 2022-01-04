@@ -3,34 +3,25 @@
     <section class="-mt-8">
       <div class="grid lg:grid-cols-12 xl:h-screen">
         <div
-          class="
-            lg:col-span-4
-            xl:col-span-3
-            relative
-            bg-hotpurple
-            px-8
-            py-24
-            max-w-x
-            order-2
-            lg:order-1
-          "
+          class="relative order-2 px-8 py-24 lg:col-span-4 xl:col-span-3 bg-hotpurple max-w-x lg:order-1"
         >
           <div>
-            <h2 class="font-bold text-2xl text-white mb-2">Connect With Me</h2>
-            <p class="text-white mb-6 font-light">
+            <h2 class="mb-2 text-2xl font-bold text-white">Connect With Me</h2>
+            <p class="mb-6 font-light text-white">
               I would love to hear from you and discuss your project.
             </p>
             <div class="mb-2">
               <div class="flex items-center mb-8">
                 <img
-                  class="w-8 h-8 mr-4"
+                class="w-8 h-8 mr-4"
                   src="https://img.icons8.com/ios/250/ffffff/marker.png"
                   alt="my working location"
                   width="25"
                   height="25"
                 />
+
                 <div class="text-white">
-                  <h3 class="font-bold text-lg mb-2">Current Location</h3>
+                  <h3 class="mb-2 text-lg font-bold">Current Location</h3>
                   <address class>Truro, Cornwall, United Kingdom</address>
                 </div>
               </div>
@@ -43,7 +34,7 @@
                   height="25"
                 />
                 <div class="text-white">
-                  <h3 class="font-bold text-lg mb-2">Linkedin</h3>
+                  <h3 class="mb-2 text-lg font-bold">Linkedin</h3>
                   <span class="contact__info-item">danielphilipjohnson</span>
                 </div>
               </div>
@@ -56,15 +47,15 @@
                   height="25"
                 />
                 <div class="text-white">
-                  <h3 class="font-bold text-lg mb-2">Chat with me</h3>
+                  <h3 class="mb-2 text-lg font-bold">Chat with me</h3>
                   <span> daniel-philip-johnson@gmail.com</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="absolute bottom-0 flex flex-wrap mb-8 max-w-screen-md">
-            <div class="text-white mb-4 mr-6">
+          <div class="absolute bottom-0 flex flex-wrap max-w-screen-md mb-8">
+            <div class="mb-4 mr-6 text-white">
               <a
                 href="https://dev.to/danielphilipjohnson"
                 aria-label="dev blog account"
@@ -86,7 +77,7 @@
                 </svg>
               </a>
             </div>
-            <div class="text-white mb-4 mr-6">
+            <div class="mb-4 mr-6 text-white">
               <a
                 href="https://www.hackerrank.com/daniel_p_johnson"
                 aria-label="hacker rank"
@@ -106,7 +97,7 @@
                   ></path></svg
               ></a>
             </div>
-            <div class="text-white mb-4 mr-6">
+            <div class="mb-4 mr-6 text-white">
               <a
                 href="https://codepen.io/danielphilipjohnson"
                 aria-label="codepen"
@@ -126,7 +117,7 @@
                   ></path></svg
               ></a>
             </div>
-            <div class="text-white mb-4 mr-6">
+            <div class="mb-4 mr-6 text-white">
               <a
                 href="https://stackoverflow.com/users/13921677/daniel-philip-johnson"
                 aria-label="stack overflow"
@@ -146,7 +137,7 @@
                   ></path></svg
               ></a>
             </div>
-            <div class="text-white mb-4 mr-6">
+            <div class="mb-4 mr-6 text-white">
               <a
                 href="https://www.freecodecamp.org/daniel-philip-johnson"
                 aria-label="free code camp"
@@ -189,23 +180,12 @@
           </div>
         </div>
         <div
-          class="
-            lg:col-span-8
-            xl:col-span-9
-            px-8
-            mb-8
-            mx-auto
-            max-w-xl
-            pt-16
-            lg:pt-32
-            order-1
-            lg:order-2
-          "
+          class="order-1 max-w-xl px-8 pt-16 mx-auto mb-8 lg:col-span-8 xl:col-span-9 lg:pt-32 lg:order-2"
         >
-          <h1 class="text-3xl font-black mb-4">
+          <h1 class="mb-4 text-3xl font-black">
             Need help on up your project?
           </h1>
-          <p class="text-lg font-bold text-dark mb-8">
+          <p class="mb-8 text-lg font-bold text-dark">
             I am here to help and answer any question you might have about your
             project. I look forward to hearing from you
             <span role="img" aria-label="happy">🙂</span>
@@ -221,7 +201,7 @@
             <input type="hidden" name="form-name" value="contact-form" />
 
             <div class="">
-              <div class="pb-2 uppercase text-dark text-sm font-bold">
+              <div class="pb-2 text-sm font-bold uppercase text-dark">
                 <label id="name-label" for="name"
                   >Name<span class="text-danger">*</span></label
                 >
@@ -230,14 +210,14 @@
                 type="text"
                 name="name"
                 id="name"
-                class="border-input border px-4 py-2 mb-4 rounded-md w-full"
+                class="w-full px-4 py-2 mb-4 border rounded-md border-input"
                 placeholder="Enter your name"
                 required=""
               />
             </div>
 
             <div class="">
-              <div class="pb-2 uppercase text-dark text-sm font-bold">
+              <div class="pb-2 text-sm font-bold uppercase text-dark">
                 <label id="email-label" for="email"
                   >Email<span class="text-danger">*</span></label
                 >
@@ -246,19 +226,19 @@
                 type="email"
                 name="email"
                 id="email"
-                class="border-input border px-4 py-2 mb-4 rounded-md w-full"
+                class="w-full px-4 py-2 mb-4 border rounded-md border-input"
                 required=""
                 placeholder="Enter your Email"
               />
             </div>
 
             <div class="">
-              <div class="pb-2 uppercase text-dark text-sm font-bold">
+              <div class="pb-2 text-sm font-bold uppercase text-dark">
                 <label for="comments">How can i help?</label>
               </div>
               <textarea
                 id="comments"
-                class="border-input border px-4 py-2 mb-4 rounded-md w-full"
+                class="w-full px-4 py-2 mb-4 border rounded-md border-input"
                 name="comment"
                 placeholder="Enter your comment here..."
                 rows="8"
@@ -266,14 +246,7 @@
             </div>
 
             <button
-              class="
-                w-full
-                bg-primary-dark
-                text-white
-                rounded
-                py-3
-                font-semibold
-              "
+              class="w-full py-3 font-semibold text-white rounded bg-primary-dark"
               id="submit"
               type="submit"
             >
@@ -290,7 +263,6 @@
 import { createSEOMeta } from "../utils/seo";
 export default {
   async asyncData(context) {
-
     const { story } = await context.app.$storyapi
       .get("cdn/stories/contact", {
         version: "draft",
@@ -397,10 +369,22 @@ export default {
   head() {
     const { title, description } = this.story.content.metadata;
     const seoImage = this.story.content.seoImage;
+    const url = this.$config.BASE_URL + this.$route.path;
 
     return {
+      link: [
+        {
+          rel: "canonical",
+          href: url,
+        },
+      ],
       title,
-      meta: createSEOMeta({ title, description, image: seoImage.filename }),
+      meta: createSEOMeta({
+        title,
+        description,
+        image: seoImage.filename,
+        url,
+      }),
     };
   },
 };

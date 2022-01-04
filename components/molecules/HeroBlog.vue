@@ -1,18 +1,9 @@
 <template>
   <div
-    class="
-      w-full
-      px-8
-      lg:px-32
-      xl:px-48
-      py-16
-      md:py-32 md:mb-4
-      bg-black
-      relative
-    "
+    class="relative w-full px-8 py-16 bg-black lg:px-32 xl:px-48 md:py-32 md:mb-4"
   >
-    <div class="mx-auto relative z-10">
-      <ul class="flex text-white text-sm lg:text-base py-8">
+    <div class="relative z-10 mx-auto">
+      <ul class="flex py-8 text-sm text-white lg:text-base">
         <li class="inline-flex items-center">
           <a href="/">
             <svg
@@ -38,42 +29,26 @@
       </ul>
     </div>
     <div
-      class="
-        section-heading
-        w-full
-        absolute
-        object-cover
-        inset-0
-        flex flex-col
-        items-start
-      "
+      class="absolute inset-0 flex flex-col items-start object-cover w-full section-heading"
     >
       <NuxtImg
-        class="absolute inset-0 w-full h-full object-cover"
+        class="absolute inset-0 object-cover w-full h-full"
         :src="blok.Background.filename"
         provider="storyblok"
       />
     </div>
 
     <div class="py-8">
-      <div class="w-full text-white group relative">
+      <div class="relative w-full text-white group">
         <div class="md:mb-4">
           <header>
             <h1
-              class="
-                text-2xl
-                md:text-4xl
-                lg:text-6xl
-                font-semibold
-                mb-2
-                md:mb-6
-                font-wotfard
-              "
+              class="mb-2 text-3xl font-semibold md:text-4xl lg:text-6xl md:mb-6 font-wotfard"
             >
               {{ blok.Heading }}
             </h1>
           </header>
-          <p>{{ blok.Subheading }}</p>
+          <p class="text-xl">{{ blok.Subheading }}</p>
         </div>
       </div>
     </div>

@@ -1,22 +1,23 @@
 <template>
   <div  class="specialize">
     <div class="img-container">
-      <img
-        layout="fixed"
-        width="70"
-        height="70"
-        data-main-image=""
-        sizes="70px"
-        decoding="async"
-        :src="filename"
+       <NuxtImg
+          class="w-full"
+          provider="storyblok"
+          format="webp"
+          quality="80"
+          width="64"
+          height="64"
+         :src="filename"
         :alt="alt"
-        style="object-fit: cover; opacity: 1"
-      />
+          role="presentation"
+        />
+     
     </div>
 
     <div>
       <h3 class="specialize__header">{{ heading }}</h3>
-      <p class="specialize__paragraph text-black">
+      <p class="text-black specialize__paragraph">
         {{ skill }}
       </p>
     </div>

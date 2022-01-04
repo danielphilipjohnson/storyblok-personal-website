@@ -12,7 +12,7 @@
           />
         </div>
       </div>
-      <div class="z-50 bg-white md:-mt-52">
+      <div class="z-50 bg-white lg:-mt-52">
         <div class="max-w-4xl px-8 mx-auto">
           <img
             class="relative z-10 w-32 h-32 border-2 border-white rounded-full bottom-12"
@@ -29,7 +29,7 @@
             <div class="grid justify-between gap-4 mb-3 lg:grid-cols-2">
               <header>
                 <h2 class="mb-1 text-2xl font-bold">Full-stack developer</h2>
-                <h3 class="text-sm text-light-gray">
+                <h3 class="text-sm text-gray">
                   👨&zwj;💻 I work remote 🏠 in Cornwall
                 </h3>
               </header>
@@ -85,7 +85,6 @@
     <section class="max-w-4xl px-8 mx-auto">
       <Header />
     </section>
-    {{ $config.BASE_URL }}
     <section class="max-w-4xl px-8 mx-auto">
       <header>
         <h2 class="mb-2 font-bold">Current Focus:</h2>
@@ -120,9 +119,6 @@
 </template>
 
 <style scoped>
-/* .profile-card-image {
-  border: 3px solid #fff;
-} */
 .bio-content,
 .bio-name {
   margin-bottom: 1rem;
@@ -135,11 +131,8 @@
 }
 
 .about {
-  background-color: #fff;
-  color: #4f4f4f;
   letter-spacing: -0.028px;
   line-height: 1.58;
-  text-align: left;
 }
 </style>
 

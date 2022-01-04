@@ -6,7 +6,7 @@
 
     <div class="grid justify-between gap-4 pb-4 lg:grid-cols-2">
       <div class="contents" v-for="repo in blok.repositories" :key="repo._uid">
-        <base-github
+        <repo
           :title="repo.title"
           :introduction="repo.introduction"
           :link="repo.link.url"

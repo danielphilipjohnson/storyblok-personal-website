@@ -1,8 +1,8 @@
 <template>
-  <footer class="bg-primary-mid text-white w-full">
-    <div class="w-full mx-auto max-w-screen-xl px-16">
+  <footer class="w-full text-white bg-primary-mid">
+    <div class="w-full max-w-screen-xl px-16 mx-auto">
       <div
-        class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 py-10 md:pt-16"
+        class="grid py-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 md:pt-16"
       >
         <Link-Section
           :classes="'col-span-1'"
@@ -28,8 +28,8 @@
           :links="externalLinks"
         />
 
-        <div class="col-span-1 lg:col-span-2 flex flex-col mr-4">
-          <h2 class="mr-8 uppercase text-sm font-bold text-light-gray mb-2">
+        <div class="flex flex-col col-span-1 mr-4 lg:col-span-2">
+          <h2 class="mb-2 mr-8 text-sm font-bold uppercase text-light-gray">
             Developer links
           </h2>
 
@@ -38,8 +38,8 @@
           </nav>
         </div>
 
-        <div class="col-span-1 lg:col-span-2 flex flex-col mb-8">
-          <h2 class="mr-8 uppercase text-sm font-bold text-light-gray mb-2">
+        <div class="flex flex-col col-span-1 mb-8 lg:col-span-2">
+          <h2 class="mb-2 mr-8 text-sm font-bold uppercase text-light-gray">
             Social links
           </h2>
           <nav class="mb-4">
@@ -50,10 +50,10 @@
     </div>
 
     <div class="w-full border-t"></div>
-    <div class="mx-auto max-w-screen-xl  grid lg:grid-cols-2 justify-between p-4">
-      <div class="flex mb-4">
-        <p class="lg:ml-8 font-bold">©2020-2021</p>
-        <p class="ml-2">Developed by Daniel Philip Johnson</p>
+    <div class="grid justify-between max-w-screen-xl p-4 mx-auto lg:grid-cols-2">
+      <div class="flex flex-col mb-4 md:flex-row">
+        <p class="font-bold lg:ml-8">©2020-2021</p>
+        <p class="md:ml-2">Developed by Daniel Philip Johnson</p>
       </div>
       <p>
         Made with
@@ -84,46 +84,6 @@
     </div>
   </footer>
 </template>
-
-<style scoped>
-.footer {
-  color: #fff;
-  width: 100%;
-}
-.footer__inner {
-  display: grid;
-  justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 2.5rem;
-}
-@media (min-width: 768px) {
-  .footer__inner {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.footer__inner-title {
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1rem;
-  width: 12rem;
-}
-
-.footer__box {
-  margin-bottom: 2rem;
-}
-
-.footer__social-item {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  margin: 0.5rem 0;
-  margin-right: 1rem;
-}
-
-.footer__box p {
-  margin-top: 1rem;
-}
-</style>
 
 <script>
 export default {

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-banner">
+  <div class="relative">
     <NuxtImg
       class="img-bg h-banner"
       height="590"
@@ -8,7 +8,7 @@
       alt=""
       role="presentation"
     />
-    <div class="absolute inset-0 px-8 py-48">
+    <div class="absolute inset-0 flex flex-col justify-center px-8">
       <h1 class="mb-4 text-4xl font-bold text-center text-white lg:text-6xl xl:text-7xl lg:mb-6">
         {{ blok.first_name }}
         <span id="secondary" class="text-secondary">
@@ -18,7 +18,7 @@
       </h1>
 
       <div id="icons" class="icons">
-        <h2 class="max-w-4xl mx-auto mb-8 text-lg text-center text-white md:text-2xl">
+        <h2 class="max-w-4xl px-8 mx-auto mb-8 text-lg text-center text-white md:px-0 md:text-2xl">
           {{ blok.subheading }}
         </h2>
         <div id="social-icons" class="flex justify-center pb-8 text-white">

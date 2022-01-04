@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-4xl mx-auto">
+  <section class="max-w-4xl px-8 mx-auto md:px-0">
     <div class="py-8 mb-4 border-b border-highlight">
       <header>
         <h2 class="text-3xl">
@@ -9,7 +9,7 @@
       </header>
       <div class="px-3 py-3 mt-4 rounded w-max bg-badge">
         <span class="mr-2" role="img" aria-label="my resume"> 📝 </span>
-        <a :href="blok.resume_link" download> Resume PDF </a>
+        <a href="/cv/Daniel_Philip_Johnson.pdf" download> Resume PDF </a>
       </div>
     </div>
     <storyblokRichTextBlockQuote :text="blok.Paragraph" />

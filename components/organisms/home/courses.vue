@@ -1,5 +1,5 @@
 <template>
-  <section class="max-w-4xl mx-auto">
+  <section class="max-w-4xl px-8 mx-auto md:px-0">
     <h2 class="text-2xl font-extrabold text-purple skill-heading">
       {{ blok.Heading }}
     </h2>

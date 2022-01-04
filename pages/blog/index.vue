@@ -6,39 +6,39 @@
       :blok="story.content"
       :is="story.content.component"
     />
-    <div class="mx-auto px-8 lg:px-32 xl:px-48 py-16">
-      <div class="text-center font-bold text-2xl">
+    <div class="px-8 py-16 mx-auto lg:px-32 xl:px-48">
+      <div class="text-2xl font-bold text-center">
         <header
-          class="pb-6 md:pb-12 flex flex-wrap items-center justify-between"
+          class="flex flex-wrap items-center justify-between pb-6 md:pb-12"
         >
           <h1 class="text-5xl capitalize">Latest</h1>
         </header>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="w-full lg:pr-8 pb-8" v-for="blog in blogs" :key="blog.uuid">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="w-full pb-8 lg:pr-8" v-for="blog in blogs" :key="blog.uuid">
           <div
-            class="border-grey border rounded hover:shadow-md hover:opacity-90 transition duration-300"
+            class="transition duration-300 border rounded border-grey hover:shadow-md hover:opacity-90"
           >
             <NuxtLink :to="'/' + blog.full_slug">
               <figure
-                class="relative h-full flex flex-col justify-between border-gray shadow-sm"
+                class="relative flex flex-col justify-between h-full shadow-sm border-gray"
               >
                 <nuxt-picture
-                  class="relative h-full flex flex-col justify-between"
+                  class="relative flex flex-col justify-between h-full"
                   provider="storyblok"
                   :src="blog.content.cover_image.filename"
                 />
               </figure>
             </NuxtLink>
 
-            <figcaption class="px-4 pt-3 md:pt-4 flex flex-col">
+            <figcaption class="flex flex-col px-4 pt-3 md:pt-4">
               <h2
-                class="flex flex-wrap items-center text-2xl lg:text-3xl md:pb-2 pb-1 break-all"
+                class="flex flex-wrap items-center pb-3 text-xl font-bold break-all lg:text-3xl md:pb-2"
               >
                 {{ blog.content.title }}
               </h2>
-              <p class="text-sm text-gray-600 dark:text-gray-100">
+              <p class="pb-4 text-sm text-gray-600 dark:text-gray-100">
                 {{ blog.content.intro }}
               </p>
               <div class="flex items-center py-4">
@@ -46,16 +46,10 @@
                   <Badges :badges="blog.tag_list" />
                 </template>
                 <NuxtLink
-                  class="mt-auto ml-auto uppercase font-medium text-xs rounded text-white leading-tight px-2 p-1 bg-gradient-to-r from-blue-700 to-blue-800 cursor-pointer transition-cursor duration-300"
+                  class="p-1 px-2 mt-auto ml-auto text-xs font-medium leading-tight text-white uppercase duration-300 rounded cursor-pointer bg-gradient-to-r from-blue-700 to-blue-800 transition-cursor"
                   :to="'/' + blog.full_slug"
                 >
-                  <p
-                    class="
-                      
-                    "
-                  >
-                    Read more
-                  </p>
+                  Read more
                 </NuxtLink>
               </div>
             </figcaption>
@@ -66,6 +60,8 @@
   </section>
 </template>
 <script>
+import { createSEOMeta } from "../../utils/seo";
+
 export default {
   async asyncData(context) {
     const res = await context.app.$storyapi.get("cdn/stories/", {
@@ -104,6 +100,55 @@ export default {
     return {
       story,
       blogs,
+    };
+  },
+  head() {
+    const { title, description } = this.story.content.metadata;
+    const seoImage = this.story.content.seoImage;
+    const url = this.$config.BASE_URL + this.$route.path;
+
+    return {
+      link: [
+        {
+          rel: "canonical",
+          href: url,
+        },
+      ],
+      title,
+      meta: createSEOMeta({
+        title,
+        description,
+        image: seoImage.filename,
+        url,
+      }),
+    };
+  },
+
+  jsonld() {
+    const BASE_URL = this.$config.BASE_URL;
+    const FULL_URL = this.$config.BASE_URL + this.$route.path; 
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: BASE_URL,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: FULL_URL,
+            },
+          ],
+        },
+      ],
     };
   },
 };

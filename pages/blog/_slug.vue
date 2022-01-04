@@ -1,41 +1,18 @@
 <template>
-  <article class="mx-auto max-w-6xl px-8 md:px-16 lg:px-24 pb-16">
+  <article class="max-w-4xl px-8 pb-16 mx-auto md:px-16 lg:px-24">
     <Badges :badges="article.tag_list" class="pt-10 pb-4" />
     <header>
       <h1
-        class="
-          text-5xl
-          font-extrabold
-          tracking-tight
-          mb-2
-          leading-tight
-          md:leading-snug
-        "
+        class="mb-2 text-5xl font-extrabold leading-tight tracking-tight md:leading-snug"
       >
         {{ article.content.title }}
       </h1>
     </header>
 
     <div class="flex pt-4">
-      <!-- <div class="mr-4">
-        <div
-         
-          class=""
-          style="border-radius: 50%"
-        >
-          <div>
-            <img
-              alt=""
-              src="https://www.danielphilipjohnson.com/static/90ff2d9e23d36ceb0d775bc4d2fb48f5/643ff/profile.webp"
-            />
-          </div>
-         
-   
-        </div>
-      </div> -->
       <div>
         <p class="font-bold text-gray-800">Created by Daniel Philip johnson</p>
-        <div class="date text-gray-500">
+        <div class="text-gray-500 date">
           Published on<span class="pl-1 font-bold">
             <time :datetime="article.content.date">
               {{ article.content.date.toLocaleDateString() }}
@@ -47,13 +24,14 @@
 
     <figure class="py-4">
       <NuxtImg
-        class="w-full shadow-lg object-cover rounded-lg"
+        class="object-cover w-full rounded-lg shadow-lg"
         :src="article.content.cover_image.filename"
+        :alt="article.content.cover_image.alt"
         provider="storyblok"
       />
       <figcaption class="pt-4">
-        <p>
-          {{ article.content.intro }}
+        <p class="leading-7">
+          {{ article.content.excerpt }}
         </p>
       </figcaption>
     </figure>
@@ -94,6 +72,8 @@
 </template>
 
 <script>
+import { createSEOMeta } from "../../utils/seo";
+
 export default {
   async asyncData({ app, route }) {
     // Get the slug from the route
@@ -110,12 +90,126 @@ export default {
 
     return { article, author: article.content.author };
   },
+  head() {
+    const { title, intro, cover_image } = this.article.content;
+    const url = this.$config.BASE_URL + "/" + this.article.full_slug;       
+
+    return {
+      link: [
+        {
+          rel: "canonical",
+          href: url,
+        },
+      ],
+      title,
+      meta: createSEOMeta({
+        title,
+        description: intro,
+        image: cover_image.filename,
+        publish_date: this.article.published_at,
+        type: "article",
+        url,
+      }),
+    };
+  },
+  jsonld() {
+    const BASE_URL = process.env.BASE_URL;
+
+    const { title, intro, cover_image, created_at, published_at } =
+      this.article.content;
+
+    const tags = this.article.tag_list.join(", ");
+
+    const getAllTextLength = this.article.content.long_text.content.map(
+      (innerContent) => {
+        if (innerContent.content) {
+          return innerContent.content.map((innerContent) => {
+            // console.log(innerContent);
+            if (innerContent.type === "text") {
+              return innerContent.text.length ? innerContent.text.length : 0;
+            } else if (innerContent.type === "paragraph") {
+              return innerContent.content.map((i) => {
+                console.log(i.text.length);
+                console.log("para");
+                return i.text.length;
+              });
+            } else {
+              return [];
+            }
+          });
+        } else {
+          return [];
+        }
+      }
+    );
+
+    function flatDeep(arr, d = 1) {
+      return d > 0
+        ? arr.reduce(
+            (acc, val) =>
+              acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val),
+            []
+          )
+        : arr.slice();
+    }
+    const flatterned = flatDeep(getAllTextLength, Infinity);
+    const wordcount = flatterned.reduce((acc, val) => acc + val, 0);
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          headline: title,
+          image: cover_image.filename,
+          thumbnailUrl: cover_image.filename,
+          author: {
+            "@id": BASE_URL + "/#/schema/person/danielphilipjohnson",
+          },
+          genre: "web development",
+          keywords: tags,
+          wordcount: wordcount,
+          publisher: {
+            "@id": BASE_URL + "/#/schema/organization/danielphilipjohnson",
+          },
+          url: BASE_URL + this.$route.path,
+          mainEntityOfPage: { "@type": "WebPage" },
+          datePublished: created_at,
+          dateModified: published_at,
+          description: intro,
+        },
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: BASE_URL,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: BASE_URL + "/blog/",
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: title,
+              item: BASE_URL + this.$route.path,
+            },
+          ],
+        },
+      ],
+    };
+  },
 };
 </script>
 <style>
 .content-custom {
   /* font-family: "Quattrocento Sans"; */
-  font-size: 1.05rem;
+  @apply text-lg;
 }
 .content-custom h1,
 .content-custom h2,
@@ -129,19 +223,6 @@ export default {
   text-transform: uppercase;
   padding-top: 1rem;
 }
-/* .content-custom h1 {
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-}
-.content-custom h2 {
-  font-size: 1.875rem;
-}
-.content-custom h3 {
-  font-size: 1.575rem;
-}
-.content-custom h4 {
-  font-size: 1.275rem;
-} */
 
 .content-custom p {
   @apply leading-7;
@@ -155,7 +236,6 @@ export default {
 }
 .content-custom a {
   text-decoration: underline;
-  --tw-text-opacity: 1;
   color: rgb(74 127 15);
 }
 .content-custom ul,

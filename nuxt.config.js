@@ -59,6 +59,7 @@ export default {
       "storyblok-nuxt",
       {
         accessToken: "8OqVvKidf8MtqBrCJeyLqAtt",
+        cacheProvider: 'memory'
       },
       '@nuxtjs/sitemap',
       '@nuxt/image',

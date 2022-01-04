@@ -28,7 +28,7 @@ module.exports = {
         base: "rgb(55, 53, 47)",
         gray: "#4B4B4B",
         grey: "rgb(235, 236, 237)",
-        "light-gray": "#696969",
+        "light-gray": "#BDB6B6",
         "dark-gray": "#4F4F4F",
         black: "#201F1B",
         text: {
@@ -37,7 +37,7 @@ module.exports = {
           dark:"rgb(51, 51, 51)"
         },
         badge: "#a1a5e438",
-        danger:"#e13557",
+        danger:"#ae0728",
         input:"#e1e2eb",
         hotpurple:"#5b21b6",
         tools:{

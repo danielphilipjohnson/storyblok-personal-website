@@ -5,6 +5,8 @@
         <NuxtImg
           class="w-full"
           provider="storyblok"
+          format="webp"
+          quality="80"
           :src="blok.Background_Image.filename"
           :alt="blok.Background_Image.alt"
           role="presentation"

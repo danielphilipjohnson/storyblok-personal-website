@@ -10,7 +10,9 @@
             <NuxtImg
               height="75"
               width="75"
-               class="p-2 mr-2 course-logo"
+              format="webp"
+              quality="80"
+              class="p-2 mr-2 course-logo"
               provider="storyblok"
               :src="course.Logo.filename"
               :alt="course.Logo.alt"

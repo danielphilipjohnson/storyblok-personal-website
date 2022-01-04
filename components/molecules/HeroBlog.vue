@@ -35,6 +35,8 @@
       <NuxtImg
         class="absolute inset-0 object-cover w-full h-full"
         :src="blok.Background.filename"
+        format="webp"
+        quality="80"
         provider="storyblok"
         role="presentation"
         alt=""

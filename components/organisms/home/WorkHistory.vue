@@ -12,6 +12,8 @@
             width="72"
             height="72"
             provider="storyblok"
+            format="webp"
+            quality="80"
             :src="job.logo.filename"
             :alt="job.logo.alt"
           />

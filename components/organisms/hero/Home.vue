@@ -4,6 +4,8 @@
       class="img-bg h-banner"
       height="590"
       provider="storyblok"
+      format="webp"
+      quality="80"
       :src="blok.background"
       alt=""
       role="presentation"

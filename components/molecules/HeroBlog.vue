@@ -3,9 +3,9 @@
     class="relative w-full px-8 py-16 bg-black lg:px-32 xl:px-48 md:py-32 md:mb-4"
   >
     <div class="relative z-10 mx-auto">
-      <ul class="flex py-8 text-sm text-white lg:text-base">
+      <ul class="flex py-8 text-sm text-white">
         <li class="inline-flex items-center">
-          <a href="/">
+          <nuxt-link class="block" to="/" aria-label="home">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -23,8 +23,9 @@
                 d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
               ></path>
             </svg>
-          </a>
-          <span class="ml-4 mr-5">/</span>
+          </nuxt-link>
+          <span class="ml-4">/</span>
+          <span class="ml-4 ">Blog</span>
         </li>
       </ul>
     </div>
@@ -35,6 +36,8 @@
         class="absolute inset-0 object-cover w-full h-full"
         :src="blok.Background.filename"
         provider="storyblok"
+        role="presentation"
+        alt=""
       />
     </div>
 

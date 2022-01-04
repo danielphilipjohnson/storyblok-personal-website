@@ -49,6 +49,7 @@
                 provider="storyblok"
                 width="760"
                 height="400"
+                format="webp"
                 :alt="article.content.Background_Image.alt"
                 :src="article.content.Background_Image.filename"
               />

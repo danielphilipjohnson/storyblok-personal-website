@@ -27,6 +27,8 @@
         class="object-cover w-full rounded-lg shadow-lg"
         :src="article.content.cover_image.filename"
         :alt="article.content.cover_image.alt"
+        format="webp"
+        quality="80"
         provider="storyblok"
       />
       <figcaption class="pt-4">

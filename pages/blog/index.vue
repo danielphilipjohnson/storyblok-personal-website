@@ -27,6 +27,7 @@
                 <nuxt-picture
                   class="relative flex flex-col justify-between h-full"
                   provider="storyblok"
+                  format="webp"
                   :src="blog.content.cover_image.filename"
                 />
               </figure>

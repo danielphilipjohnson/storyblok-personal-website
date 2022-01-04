@@ -8,8 +8,11 @@
         <li>
           <nuxt-link class="nav-link" to="/">/</nuxt-link>
         </li>
-        <li>
+        <li class="hidden md:block">
           <nuxt-link class="nav-link" to="/about">About</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="nav-link" to="/blog">Blog</nuxt-link>
         </li>
         <li>
           <nuxt-link class="nav-link" to="/projects">Projects</nuxt-link>

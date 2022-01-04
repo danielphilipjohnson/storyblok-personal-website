@@ -124,13 +124,10 @@ export default {
       (innerContent) => {
         if (innerContent.content) {
           return innerContent.content.map((innerContent) => {
-            // console.log(innerContent);
             if (innerContent.type === "text") {
               return innerContent.text.length ? innerContent.text.length : 0;
             } else if (innerContent.type === "paragraph") {
               return innerContent.content.map((i) => {
-                console.log(i.text.length);
-                console.log("para");
                 return i.text.length;
               });
             } else {

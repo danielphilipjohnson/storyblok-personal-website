@@ -11,15 +11,15 @@
       >
         <div class="flex items-center mb-3">
           <div class="border-2 border-highlight">
-            <picture>
-              <img
-                layout="fixed"
-                width="72"
-                height="72"
-                :src="education.School_Logo.filename"
-                :alt="education.School_Logo.alt"
-                style="object-fit: cover; opacity: 1"
-            /></picture>
+            <NuxtImg
+              :src="education.School_Logo.filename"
+              :alt="education.School_Logo.alt"
+              width="72"
+              height="72"
+              format="webp"
+              quality="80"
+              provider="storyblok"
+            />
           </div>
           <header class="ml-4 leading-normal">
             <h3 class="text-lg font-extrabold">
@@ -38,10 +38,10 @@
           </header>
         </div>
 
-        <ul class="mb-4 job-description">
-          <div v-for="p in education.Paragraphs" :key="p._uid">
+        <ul class="mb-4 leading-loose job-description rich-text">
+          <li v-for="p in education.Paragraphs" :key="p._uid">
             <storyblokRichText :text="p.text" />
-          </div>
+          </li>
         </ul>
       </li>
     </ul>

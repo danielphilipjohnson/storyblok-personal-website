@@ -13,12 +13,13 @@
             <div class="mb-2">
               <div class="flex items-center mb-8">
                 <img
-                  class="w-8 h-8 mr-4"
+                class="w-8 h-8 mr-4"
                   src="https://img.icons8.com/ios/250/ffffff/marker.png"
                   alt="my working location"
                   width="25"
                   height="25"
                 />
+
                 <div class="text-white">
                   <h3 class="mb-2 text-lg font-bold">Current Location</h3>
                   <address class>Truro, Cornwall, United Kingdom</address>

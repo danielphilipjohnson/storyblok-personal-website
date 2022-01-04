@@ -39,7 +39,7 @@
         
         <base-blockquote class="italic" :text="job.excerpt"/> 
 
-        <div v-for="p in job.Paragraph" :key="p._uid">
+        <div v-for="p in job.Paragraph" :key="p._uid" class="leading-loose">
           <storyblokRichText :text="p.text" />
         </div>       
       </li>

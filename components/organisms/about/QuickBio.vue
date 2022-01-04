@@ -8,9 +8,13 @@
         <div class="w-full pr-8 md:w-3/12 lg:w-1/4">
           <figure class="mb-4">
             <div class="pr-4 object-fit">
-              <img
+              <NuxtImg
                 alt="4 year old Daniel Johnson playing in the garden"
-                src="~/assets/img/me-as-a-child.jpg"
+                format="webp"
+                quality="80"
+                src="me-as-a-child.jpg"
+                provider="static"
+               
               />
             </div>
             <figcaption class="py-2 text-xs text-center text-gray">
@@ -143,10 +147,13 @@
         <section class="w-full md:w-3/12 xl:w-1/4 md:pl-4 xl:pl-8">
           <figure class="mb-4">
             <div class="pr-4">
-              <img
+              <NuxtImg
                 alt="A selfie of me with the sea the st ives sea behind."
-                src="~/assets/img/me-in-st-ives.jpg"
+                src="me-in-st-ives.jpg"
+                format="webp"
+                quality="80"
               />
+              
             </div>
             <figcaption class="py-2 text-xs text-center text-gray">
               Moving to Cornwall

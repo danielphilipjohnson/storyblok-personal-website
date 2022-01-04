@@ -61,12 +61,14 @@ export default {
         accessToken: "8OqVvKidf8MtqBrCJeyLqAtt",
       },
       '@nuxtjs/sitemap',
+      '@nuxt/image',
     ],
   ],
   image: {
     storyblok: {
       baseURL: 'https://img2.storyblok.com'
-    }
+    },
+    dir: 'assets/img'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="link">
+  <nuxt-link :to="link" class="hover:text-blue-600">
     {{ content }}
     <slot></slot>
   </nuxt-link>

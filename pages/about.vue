@@ -3,24 +3,28 @@
     <div class="about-info">
       <div class="relative z-0 w-full" style="z-index: -99">
         <div class="card-head-bg">
-          <img
+          <NuxtImg
             class="object-cover w-full"
-            src="~/assets/img/linkedinBanner.png"
+            src="linkedinBanner.png"
             alt="linkedin banner"
-            height="250"
+            format="webp"
+            width="1680"
+            height="600"
             role="presentation"
           />
         </div>
       </div>
       <div class="z-50 bg-white lg:-mt-52">
         <div class="max-w-4xl px-8 mx-auto">
-          <img
+          <NuxtImg
             class="relative z-10 w-32 h-32 border-2 border-white rounded-full bottom-12"
-            src="~/assets/img/profile.jpg"
+            src="profile.jpg"
             alt="Daniel Philip Johnson"
             role="presentation"
-            width="32"
-            height="32"
+            width="100"
+            height="100"
+            format="webp"
+            quality="80"
           />
 
           <div class="profile-card-body">
@@ -43,6 +47,8 @@
                     width="20"
                     height="20"
                     class="mr-2"
+                    format="webp"
+                    quality="80"
                   /><a
                     class="text-sm"
                     href="/static/Daniel_Philip_Johnson_Front_End_Engineer-afc8e0c1b966394ae65c1dbd9697fd63.pdf"

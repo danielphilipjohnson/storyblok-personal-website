@@ -43,10 +43,11 @@
               class="pr-4 object-fit"
             >
               <div style="max-width: 500px; display: block">
-                <img
+                <NuxtImg
                   alt="Daniel Johnson wearing a purple face mask on his first day to work"
-                  src="~/assets/img/first-day-fullstack.jpg"
-        
+                  src="first-day-fullstack.jpg"
+                  format="webp"
+                  quality="80"
                 />
               </div>
             </div>

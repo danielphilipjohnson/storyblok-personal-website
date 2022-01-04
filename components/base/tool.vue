@@ -1,18 +1,17 @@
 <template>
-  <div  class="specialize">
+  <div class="specialize">
     <div class="img-container">
-       <NuxtImg
-          class="w-full"
-          provider="storyblok"
-          format="webp"
-          quality="80"
-          width="64"
-          height="64"
-         :src="filename"
+      <NuxtImg
+        class="w-full"
+        provider="storyblok"
+        format="webp"
+        quality="80"
+        width="64"
+        height="64"
+        :src="filename"
         :alt="alt"
-          role="presentation"
-        />
-     
+        role="presentation"
+      />
     </div>
 
     <div>
@@ -37,12 +36,11 @@ export default {
     heading: {
       type: String,
       required: true,
-    },skill: {
+    },
+    skill: {
       type: String,
       required: true,
     },
-
-    
   },
 };
 </script>

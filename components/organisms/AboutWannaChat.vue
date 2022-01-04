@@ -1,9 +1,9 @@
 <template>
-      <article class="px-8 max-w-4xl mx-auto py-4 mb-8">
-      <h2 class="text-xl font-bold mb-2 pb-4 border-b border-grey">
+      <article class="max-w-4xl px-8 py-4 mx-auto mb-8">
+      <h2 class="pb-4 mb-2 text-xl font-bold border-b border-grey">
         ☕ Wanna Chat?
       </h2>
-      <ul class="space-y-4 list-disc ml-8">
+      <ul class="ml-8 space-y-4 list-disc">
         <li>
           @ me on <a href="https://twitter.com/danielp_johnson">Twitter</a>{" "}
           about any of the following topics! 💬

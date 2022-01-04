@@ -1,6 +1,6 @@
 <template>
   <section class="py-4 mb-4" aria-label="my future plans">
-    <div class="px-8 max-w-4xl mx-auto">
+    <div class="max-w-4xl px-8 mx-auto">
       <Header-Section
         tag="h2"
         emoji="💚"

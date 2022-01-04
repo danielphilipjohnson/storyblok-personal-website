@@ -7,23 +7,24 @@
           provider="storyblok"
           :src="blok.Background_Image.filename"
           :alt="blok.Background_Image.alt"
+          role="presentation"
         />
       </div>
-      <div class="mx-auto px-8 max-w-6xl mb-4">
+      <div class="max-w-6xl px-8 mx-auto mb-4">
         <span
-          class="profile-card-image border-4 border-white  rounded-full relative z-10 text-4xl bg-white py-4 px-5 bottom-8"
+          class="relative z-10 px-5 py-4 text-4xl bg-white border-4 border-white rounded-full profile-card-image bottom-8"
           role="img"
           aria-label="project icon"
           >🖥️</span
         >
       </div>
     </div>
-    <div class="px-8 max-w-6xl mx-auto mb-8">
-      <h1 class="text-dark font-bold text-5xl pb-4 mb-4 capitalize border-b border-grey">
+    <div class="max-w-6xl px-8 mx-auto mb-8">
+      <h1 class="pb-4 mb-4 text-5xl font-bold capitalize border-b text-dark border-grey">
         {{ blok.heading }}
       </h1>
       <div
-        class="mb-8 flex items-center bg-badge p-3 rounded border border-grey"
+        class="flex items-center p-3 mb-8 border rounded bg-badge border-grey"
       >
         <div
           class="text-sm leading-7"

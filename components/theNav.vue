@@ -6,7 +6,7 @@
       <ul class="flex justify-between">
         <li>
           <nuxt-link class="block" to="/" aria-label="home">
-            <img class="w-12 h-12" src="~/assets/icon/icon.png" />
+            <img width="16" height="16" class="w-12 h-12" src="~/assets/icon/icon.png" alt="DPJ" role="presentation" />
           </nuxt-link>
         </li>
       </ul>

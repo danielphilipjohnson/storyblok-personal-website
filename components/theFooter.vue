@@ -50,7 +50,9 @@
     </div>
 
     <div class="w-full border-t"></div>
-    <div class="grid justify-between max-w-screen-xl p-4 mx-auto lg:grid-cols-2">
+    <div
+      class="grid justify-between max-w-screen-xl p-4 mx-auto lg:grid-cols-2"
+    >
       <div class="flex flex-col mb-4 md:flex-row">
         <p class="font-bold lg:ml-8">©2020-2021</p>
         <p class="md:ml-2">Developed by Daniel Philip Johnson</p>
@@ -62,24 +64,26 @@
           target="_blank"
           rel="noopener noreferrer"
           style="color: rgb(148, 200, 90)"
-          >#Nuxt</a>,
-          <a
+          >#Nuxt</a
+        >,
+        <a
           class="mx-1"
           href="https://www.storyblok.com/"
           target="_blank"
           rel="noopener noreferrer"
           style="color: rgb(148, 200, 90)"
-          >#Storyblok</a>
-          
-          and
+          >#Storyblok</a
+        >
+
+        and
         <a
           class="mx-1"
           href="https://tailwindcss.com/"
           target="_blank"
           rel="noopener noreferrer"
           style="color: rgb(148, 200, 90)"
-          >#TailwindCSS</a>
-        
+          >#TailwindCSS</a
+        >
       </p>
     </div>
   </footer>
@@ -109,7 +113,7 @@ export default {
           external: false,
           alt: "Work from Daniel Philip Johnson",
         },
-         {
+        {
           link: "/contact/",
           content: "Contact",
           external: false,
@@ -184,11 +188,6 @@ export default {
       ],
       developerLinks: [
         {
-          icon: "dev",
-          link: "https://dev.to/danielphilipjohnson",
-          alt: "dev to of Daniel Philip Johnson",
-        },
-        {
           icon: "hackerrank",
           link: "https://www.hackerrank.com/daniel_p_johnson",
           alt: "hackerrank of Daniel Philip Johnson",
@@ -230,6 +229,10 @@ export default {
           icon: "youtube",
           link: "https://www.youtube.com/c/DanielPhilipJohnson/",
           alt: "youtube of Daniel Philip Johnson",
+        }, {
+          icon: "dev",
+          link: "https://dev.to/danielphilipjohnson",
+          alt: "dev to of Daniel Philip Johnson",
         },
       ],
     };

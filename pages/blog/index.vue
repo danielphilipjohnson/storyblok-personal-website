@@ -14,7 +14,7 @@
           <h1 class="text-5xl capitalize">Latest</h1>
         </header>
       </div>
-
+      
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div class="w-full pb-8 lg:pr-8" v-for="blog in blogs" :key="blog.uuid">
           <div
@@ -25,6 +25,7 @@
                 class="relative flex flex-col justify-between h-full shadow-sm border-gray"
               >
                 <nuxt-picture
+                  v-if="blog.content.cover_image"
                   class="relative flex flex-col justify-between h-full"
                   provider="storyblok"
                   format="webp"
@@ -127,7 +128,7 @@ export default {
 
   jsonld() {
     const BASE_URL = this.$config.BASE_URL;
-    const FULL_URL = this.$config.BASE_URL + this.$route.path; 
+    const FULL_URL = this.$config.BASE_URL + this.$route.path;
 
     return {
       "@context": "https://schema.org",

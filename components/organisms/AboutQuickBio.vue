@@ -1,12 +1,12 @@
 <template>
-  <article class="px-8 max-w-4xl mx-auto" aria-label="quick bio">
-    <h2 class="text-2xl font-bold mb-4 pb-4 border-b border-grey">
+  <article class="max-w-4xl px-8 mx-auto" aria-label="quick bio">
+    <h2 class="pb-4 mb-4 text-2xl font-bold border-b border-grey">
       <span role="img" aria-label="trophy">📔</span> My Developer Journey
     </h2>
     <div>
-      <section class="flex flex-col md:flex-row mb-8">
-        <div class="w-full md:w-3/12 lg:w-1/4 pr-8">
-          <figure>
+      <section class="flex flex-col mb-8 md:flex-row">
+        <div class="w-full pr-8 md:w-3/12 lg:w-1/4">
+          <figure class="mb-4">
             <div class="pr-4 object-fit">
               <div style="max-width: 520px; display: block">
                 <img
@@ -18,7 +18,7 @@
                 />
               </div>
             </div>
-            <figcaption class="text-center py-2 text-xs text-gray">
+            <figcaption class="py-2 text-xs text-center text-gray">
               4 year old Daniel Johnson playing in the garden
             </figcaption>
           </figure>
@@ -42,7 +42,7 @@
             She claimed all that time for a space invaders clone.
           </p>
           <div
-            class="w-full xl:w-max xl:mb-4 flex items-center bg-badge p-3 rounded border border-grey"
+            class="flex items-center w-full p-3 border rounded  xl:w-max xl:mb-4 bg-badge border-grey"
           >
             <div class="badge">
               <span role="img" aria-label="go here">👉 </span>If you want to
@@ -52,8 +52,8 @@
           </div>
         </div>
       </section>
-      <div class="flex flex-col md:flex-row mb-8">
-        <section class="w-full md:w-9/12 xl:w-3/4 mb-4">
+      <div class="flex flex-col mb-8 md:flex-row">
+        <section class="w-full mb-4 md:w-9/12 xl:w-3/4">
           <p class="leading-7">
             Span a few years to one year before I started college. I needed to
             buy a PC to submit my assignments. So during the summer of 2008, I
@@ -146,7 +146,7 @@
           </p>
         </section>
         <section class="w-full md:w-3/12 xl:w-1/4 md:pl-4 xl:pl-8">
-          <figure>
+          <figure class="mb-4">
             <div class="pr-4">
               <div style="max-width: 600px; display: block">
                 <img
@@ -158,7 +158,7 @@
                 />
               </div>
             </div>
-            <figcaption class="text-center py-2 text-xs text-gray">
+            <figcaption class="py-2 text-xs text-center text-gray">
               Moving to Cornwall
             </figcaption>
           </figure>

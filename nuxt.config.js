@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'personal-web',
+    title: 'Daniel Philip Johnson',
     htmlAttrs: {
       lang: 'en'
     },
@@ -54,7 +54,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/gtm',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -67,7 +68,7 @@ export default {
       },
       '@nuxtjs/sitemap',
       '@nuxt/image',
-      '@nuxtjs/gtm',
+      
     ],
   ],
   image: {
@@ -79,6 +80,9 @@ export default {
   gtm: {
     id: 'GTM-TTNR7QK'
   },
+  googleAnalytics: {
+    id: 'G-ZW19C938PS'
+  },
   sitemap: {
     hostname: 'https://danielphilipjohnson.me/',
     gzip: true,
@@ -87,4 +91,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
+  
 }

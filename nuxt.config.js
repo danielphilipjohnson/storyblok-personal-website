@@ -67,6 +67,7 @@ export default {
       },
       '@nuxtjs/sitemap',
       '@nuxt/image',
+      '@nuxtjs/gtm',
     ],
   ],
   image: {
@@ -74,6 +75,13 @@ export default {
       baseURL: 'https://img2.storyblok.com'
     },
     dir: 'assets/img'
+  },
+  gtm: {
+    id: 'GTM-TTNR7QK'
+  },
+  sitemap: {
+    hostname: 'https://danielphilipjohnson.me/',
+    gzip: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

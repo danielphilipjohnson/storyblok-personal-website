@@ -5,7 +5,7 @@
         <div
           class="relative order-2 px-8 py-24 lg:col-span-4 xl:col-span-3 bg-hotpurple max-w-x lg:order-1"
         >
-          <div>
+          <div class="mb-8">
             <h2 class="mb-2 text-2xl font-bold text-white">Connect With Me</h2>
             <p class="mb-6 font-light text-white">
               I would love to hear from you and discuss your project.

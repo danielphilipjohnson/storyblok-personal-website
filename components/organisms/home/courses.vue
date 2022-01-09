@@ -45,7 +45,7 @@
                 focusable="false"
                 data-prefix="fas"
                 data-icon="graduation-cap"
-                class="svg-inline--fa fa-graduation-cap fa-w-20"
+                class="w-4"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 512"
@@ -183,7 +183,5 @@ export default {
   cursor: pointer;
 }
 
-.svg-inline--fa.fa-w-20 {
-  width: 1.25rem;
-}
+
 </style>

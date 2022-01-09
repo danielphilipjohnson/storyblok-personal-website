@@ -5,7 +5,7 @@
     </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2">
       <div v-for="course in blok.Courses" class="grid grid-cols-3 course" :key="course._uid">
-        <div class="col-span-1">
+        <div class="col-span-1 mr-3">
           <picture>
             <NuxtImg
               height="75"
@@ -96,7 +96,6 @@ export default {
   margin-bottom: 0.25rem;
   border-radius: 2px;
   padding: 2rem;
-
   border: 2px solid rgba(235, 236, 237, 0.8);
 }
 
@@ -112,7 +111,6 @@ export default {
 
   border: 1px solid #eee;
   border-radius: 6px;
-
   margin-bottom: 1rem;
 }
 
@@ -146,6 +144,7 @@ export default {
   -ms-user-select: none;
   user-select: none;
   vertical-align: middle;
+  display: inline-flex;
 }
 .btn-certificate svg {
   margin-right: 0.5rem;

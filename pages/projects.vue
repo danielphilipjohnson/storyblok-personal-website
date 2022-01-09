@@ -66,129 +66,8 @@
             <p class="mb-4 text-sm text-gray-600 dark:text-gray-100">
               <storyblokRichText :text="article.content.Excerpt" />
             </p>
-            <div class="pb-4 badges">
-              <div v-for="logo in article.content.Built_With" :key="logo._uid">
-                <div v-if="logo.Text.toLowerCase() == 'php'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-php"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'wordpress'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-wordpress"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'tailwind'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-tailwind"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'javascript'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-javascript"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'docker'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-docker"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'nuxt'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-nuxt"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'prismic'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-prismic"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'netlify'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-netlify"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'typescript'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-typescript"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'mailchimp'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-mailchimp"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'aws'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-aws"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'vue'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-vue"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'vuex'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-vuex"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'bootstrap'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-bootstrap"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'algolia'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-algolia"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'firebase'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-firebase"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'html'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-html"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'css'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-css"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else-if="logo.Text.toLowerCase() == 'sass'">
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-tools-sass"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-                <div v-else>
-                  <span
-                    class="px-2 py-1 mr-1 text-xs text-white rounded bg-secondary"
-                    >{{ logo.Text }}</span
-                  >
-                </div>
-              </div>
+            <div class="pb-4">
+              <project-badges :badges="article.content.Built_With" />
             </div>
           </figcaption>
         </div>
@@ -198,8 +77,10 @@
 </template>
 
 <script>
+import ProjectBadges from '../components/molecules/ProjectBadges.vue';
 import { createSEOMeta } from "../utils/seo";
 export default {
+  components: { ProjectBadges },
   async asyncData(context) {
     const res = await context.app.$storyapi.get("cdn/stories/", {
       starts_with: "project",
@@ -405,9 +286,5 @@ export default {
   width: 12px;
 }
 
-.badges {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+
 </style>

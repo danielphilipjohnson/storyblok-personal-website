@@ -36,7 +36,7 @@
             </span>
           </p>
           <a
-            class="btn-certificate w-max"
+            class="block btn-certificate w-max"
             :href="course.Certificate_Link.url"
           >
             <div class="flex">

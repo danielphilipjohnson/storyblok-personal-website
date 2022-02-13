@@ -6,7 +6,7 @@
       :blok="story.content"
       :is="story.content.component"
     />
-    <div class="px-8 py-16 mx-auto lg:px-32 xl:px-48">
+    <div class="px-8 py-4 mx-auto lg:px-32 xl:px-48">
       <div class="text-2xl font-bold text-center">
         <header
           class="flex flex-wrap items-center justify-between pb-6 md:pb-12"

@@ -36,12 +36,12 @@
             </h5>
           </header>
         </div>
-        
-        <base-blockquote class="italic" :text="job.excerpt"/> 
 
-        <div v-for="p in job.Paragraph" :key="p._uid" class="leading-loose">
-          <storyblokRichText :text="p.text" />
-        </div>       
+
+        <base-blockquote class="italic" :text="job.excerpt" />
+        <read-more-button :paragraphs="job.Paragraph" />
+
+ 
       </li>
     </ul>
   </section>

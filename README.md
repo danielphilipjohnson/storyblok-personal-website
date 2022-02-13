@@ -1,5 +1,19 @@
 # personal-web
 
+
+reading list
+
+
+
+resume
+
+
+hide too much text 
+
+rewrite content
+
+// other project https://www.basecoatmarketing.com/7-elements-your-painting-website-needs-to-convert-leads-in-2022/
+
 ## Build Setup
 
 ```bash

@@ -8,13 +8,7 @@
       <storyblokRichText :text="p.text" />
     </div>
 
-    <button
-      v-show="showButton"
-      class="px-3 py-1 text-sm font-bold border bg-highlight"
-      @click="readMore()"
-    >
-      Read More
-    </button>
+    <read-more-button :showButton="showButton" @customClick="readMore" />
   </div>
 </template>
 

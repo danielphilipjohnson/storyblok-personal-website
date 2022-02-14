@@ -6,24 +6,43 @@
       </h2>
       <h3>Here are a list of tools, I use daily during my job.</h3>
     </header>
+
     <div class="specializes">
-      <div v-for="tool in blok.Tools" :key="tool._uid">
-          <base-tool :filename="tool.Logo.filename"
+      <div v-for="tool in filteredContent" :key="tool._uid">
+        <base-tool
+          :filename="tool.Logo.filename"
           :alt="tool.Logo.alt"
           :heading="tool.Heading"
           :skill="tool.Skill"
-          />
+        />
       </div>
+      <!-- <button
+        v-show="showButton"
+        class="px-3 py-1 text-sm font-bold border bg-highlight"
+        @click="readMore()"
+      >
+        Read More
+      </button> -->
     </div>
+
+    <read-more-button :showButton="showButton" @customClick="readMore" />
   </section>
 </template>
 <script>
+import { useReadMore } from "../../../composables/useReadMore.js";
+
 export default {
   props: {
     blok: {
       type: Object,
       required: true,
     },
+  },
+  setup(context) {
+    const tools = context.blok.Tools;
+    const { readMore, filteredContent, showButton } = useReadMore(tools, 4);
+
+    return { readMore, filteredContent, showButton };
   },
 };
 </script>

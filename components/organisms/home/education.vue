@@ -6,7 +6,7 @@
     <ul class="work-experience">
       <li
         class="job-current"
-        v-for="education in blok.Education"
+        v-for="education in filteredContent"
         :key="education._uid"
       >
         <div class="flex items-center mb-3">
@@ -45,15 +45,24 @@
         </ul>
       </li>
     </ul>
+    <read-more-button :showButton="showButton" @customClick="readMore" />
   </section>
 </template>
 <script>
+import { useReadMore } from "../../../composables/useReadMore.js";
 export default {
   props: {
     blok: {
       type: Object,
       required: true,
     },
+  },
+  setup(context) {
+    const { Education } = context.blok;
+
+    const { readMore, filteredContent, showButton } = useReadMore(Education, 1);
+
+    return { readMore, filteredContent, showButton };
   },
 };
 </script>

@@ -5,7 +5,7 @@
     </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2">
       <div
-        v-for="course in blok.Courses"
+        v-for="course in filteredContent"
         class="grid grid-cols-3 course"
         :key="course._uid"
       >
@@ -56,21 +56,31 @@
                 ></path>
               </svg>
               <p>View Certificate</p>
-              
             </div>
           </a>
         </div>
       </div>
     </div>
+
+    <read-more-button :showButton="showButton" @customClick="readMore" />
   </section>
 </template>
+
 <script>
+import { useReadMore } from "../../../composables/useReadMore.js";
+
 export default {
   props: {
     blok: {
       type: Object,
       required: true,
     },
+  },
+  setup(context) {
+    const { Courses } = context.blok;
+    const { readMore, filteredContent, showButton } = useReadMore(Courses, 4);
+
+    return { readMore, filteredContent, showButton };
   },
 };
 </script>
@@ -182,6 +192,4 @@ export default {
   text-decoration: underline;
   cursor: pointer;
 }
-
-
 </style>

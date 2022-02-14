@@ -39,7 +39,7 @@
 
 
         <base-blockquote class="italic" :text="job.excerpt" />
-        <read-more-button :paragraphs="job.Paragraph" />
+        <work-history-content :paragraphs="job.Paragraph" />
 
  
       </li>

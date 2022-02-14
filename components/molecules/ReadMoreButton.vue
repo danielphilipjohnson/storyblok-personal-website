@@ -1,38 +1,28 @@
 <template>
-  <div>
-    <div
-      v-for="p in filteredContent"
-      :key="p._uid"
-      class="leading-loose mb-4"
-    >
-      <storyblokRichText :text="p.text" />
-    </div>
-    <button
-      v-show="showButton"
-      class="border py-1 px-3 bg-highlight text-sm font-bold"
-      @click="readMore()"
-    >
-      Read More
-    </button>
-  </div>
+  <button
+    v-show="showButton"
+    type="button"
+    class="px-3 py-1 text-sm font-bold border bg-highlight"
+    @click="customClick"
+  >
+    Read More
+  </button>
 </template>
 
 <script>
-import { ref } from "@vue/composition-api";
-import {useReadMore} from "../../composables/useReadMore.js";
 export default {
-  props: {
-    paragraphs: {
-      type: Array,
+  component: {
+    name: "ReadMoreButton",
+  },
+  methods: {
+    customClick() {
+      this.$emit("customClick");
     },
   },
-  setup(context) {
-    const { paragraphs } = context;
-    const { readMore, filteredContent, showButton } =  useReadMore(paragraphs, 1);
-
-    
-
-    return { readMore, filteredContent, showButton };
+  props: {
+    showButton: {
+      type: Boolean,
+    },
   },
 };
 </script>

@@ -3,12 +3,12 @@ import { ref } from "@vue/composition-api";
 const useReadMore = (content, itemsToDisplay) => {
   const showButton = ref(true);
 
-  // need to work out
+  // provide some test to determine error handling
   if(!Array.isArray(content)){
       return {error: true};
   }
 
-  if (content.length > 0) {
+  if (content.length > 0 && itemsToDisplay < content.length) {
 
     const filteredContent = ref(content.slice(0, itemsToDisplay));
     

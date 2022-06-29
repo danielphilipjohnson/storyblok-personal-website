@@ -19,6 +19,7 @@
               format="webp"
               quality="80"
               provider="storyblok"
+              loading="lazy" 
             />
           </div>
           <header class="ml-4 leading-normal">

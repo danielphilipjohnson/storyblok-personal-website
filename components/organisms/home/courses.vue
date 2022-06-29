@@ -20,6 +20,7 @@
               provider="storyblok"
               :src="course.Logo.filename"
               :alt="course.Logo.alt"
+              loading="lazy"
             />
           </picture>
         </div>

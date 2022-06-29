@@ -7,25 +7,25 @@
         </h2>
         <h3 class="pt-2 text-xl">{{ blok.subheading }}</h3>
       </header>
-      <div class="px-3 py-3 mt-4 rounded w-max bg-badge">
-        <span class="mr-2" role="img" aria-label="my resume"> 📝 </span>
+      <div
+        class="px-3 py-3 mt-4 font-bold transition duration-500 rounded w-max bg-badge hover:shadow-md"
+      >
+        <span class="mr-2 raise" role="img" aria-label="my resume"> 📝 </span>
         <a href="/cv/Daniel_Philip_Johnson.pdf" download> Resume PDF </a>
       </div>
     </div>
     <storyblokRichTextBlockQuote :text="blok.Paragraph" />
     <div class="badge-container">
-      <NuxtLink to="/about"
-        >
-        <div class="px-3 py-3 mt-4 mb-2 font-bold rounded w-max bg-badge">
+      <NuxtLink to="/about">
+        <div class="px-3 py-3 mt-4 mb-2 font-bold transition duration-500 rounded w-max bg-badge hover:shadow-md slide">
           <span role="img" aria-label="go here">👉 </span>
-          If you want to know
-          about me
+          If you want to know about me
         </div>
-        </NuxtLink>
+      </NuxtLink>
     </div>
   </section>
 </template>
- 
+
 <script>
 export default {
   props: {

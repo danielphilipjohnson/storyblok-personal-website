@@ -11,6 +11,7 @@
         :src="filename"
         :alt="alt"
         role="presentation"
+        loading="lazy"
       />
     </div>
 

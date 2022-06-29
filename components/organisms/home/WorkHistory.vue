@@ -16,6 +16,7 @@
             quality="80"
             :src="job.logo.filename"
             :alt="job.logo.alt"
+            loading="lazy"
           />
           <header class="ml-4 leading-normal">
             <h3 class="text-lg font-extrabold">

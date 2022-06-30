@@ -2,7 +2,7 @@
   <div
     class="relative w-full px-8 py-16 bg-black lg:px-32 xl:px-48 md:py-32 md:mb-4"
   >
-    <div class="relative z-10 mx-auto">
+    <div class="container relative z-10 mx-auto">
       <ul class="flex py-8 text-sm text-white">
         <li class="inline-flex items-center">
           <nuxt-link class="block" to="/" aria-label="home">
@@ -43,7 +43,7 @@
       />
     </div>
 
-    <div class="py-8">
+    <div class="container py-8">
       <div class="relative w-full text-white group">
         <div class="md:mb-4">
           <header>

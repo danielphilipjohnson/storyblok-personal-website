@@ -33,7 +33,9 @@
             v-for="link in blok.social_links"
             :key="link._uid"
           >
-            <div class="w-10 transition-colors duration-500 lg:w-14 hover:text-green-300">
+            <div
+              class="w-10 transition-colors duration-500 lg:w-14 hover:text-green-300"
+            >
               <BaseIcon
                 :icon="link.icon[0]"
                 :link="link.link.url"
@@ -44,13 +46,14 @@
         </div>
 
         <div class="flex justify-center">
-          <div v-for="button in blok.buttons" :key="button._uid">
+          <template v-for="button in blok.buttons">
             <BaseButton
+              :key="button._uid"
               :type="button.type"
-              :link="button.link"
+              :link="button.link.cached_url"
               :text="button.text"
             />
-          </div>
+          </template>
         </div>
       </div>
     </div>

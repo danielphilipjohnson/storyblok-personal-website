@@ -10,7 +10,7 @@
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              focusable='false'
+              focusable="false"
               fill="currentColor"
               class="bi bi-house"
               viewBox="0 0 16 16"
@@ -25,8 +25,7 @@
               ></path>
             </svg>
           </nuxt-link>
-          <span class="ml-4 not-sr-only">/</span>
-          <span class="ml-4 ">Blog</span>
+          <span class="ml-4 capitalize"> {{ path }}</span>
         </li>
       </ul>
     </div>
@@ -68,6 +67,9 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return { path: this.$route.path };
   },
 };
 </script>

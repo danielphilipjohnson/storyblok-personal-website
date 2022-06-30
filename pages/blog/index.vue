@@ -41,7 +41,7 @@
                   format="webp"
                   height="640"
                   width="1138"
-                  :alt="blog.content.cover_image.alt"
+                  :alt="blog.content.title"
                   :src="blog.content.cover_image.filename"
                 />
               </figure>
@@ -62,6 +62,9 @@
                   :to="'/' + blog.full_slug"
                 >
                   Read full article
+                  <span class="sr-only">
+                    {{ blog.content.title }}
+                  </span>
                 </NuxtLink>
               </div>
             </figcaption>

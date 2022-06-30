@@ -1,15 +1,14 @@
 <template>
-  <div class="repo max-w-md">
-    <a class="flex flex-col justify-between h-full" 
-    :href="link">
+  <div class="max-w-md p-3 mb-2 border rounded-md border-primary-dark">
+    <a class="flex flex-col justify-between h-full" :href="link">
       <div>
-        <div class="repo__header flex items-center">
+        <div class="flex items-center mb-3">
           <svg
             aria-hidden="true"
             focusable="false"
             data-prefix="fas"
             data-icon="book"
-            class="svg-inline--fa fa-book fa-w-14 text-primary mr-4"
+            class="w-3 mr-4 text-primary"
             role="img"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
@@ -21,7 +20,7 @@
           </svg>
           <p>{{ title }}</p>
         </div>
-        <p class="repo__text">
+        <p class="mb-4 text-sm text-dark-gray">
           {{ introduction }}
         </p>
       </div>
@@ -50,58 +49,22 @@
 <script>
 export default {
   props: {
-      link: {
-        type: String,
-        required: true,
-      },
-      title: {
-        type: String,
-        required: true,
-      },
-      introduction: {
-        type: String,
-        required: true,
-      },
-      path: {
-        type: String,
-        required: true,
-      },
+    link: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    introduction: {
+      type: String,
+      required: true,
+    },
+    path: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
-<style scoped>
-.max-w-md {
-  max-width: 28rem;
-}
-
-.repo {
-  border: 1px solid rgba(55, 53, 47, 0.16);
-  border-radius: 5px;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.repo__header {
-  display: flex;
-  margin-bottom: 0.75rem;
-}
-.repo__header-img {
-  margin-right: 0.5rem;
-}
-.repo__text {
-  font-size: 0.9rem;
-  color: #5a5d61;
-  margin-bottom: 1rem;
-}
-.repo__footer span {
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
-}
-
-.svg-inline--fa.fa-w-14 {
-  width: 0.875em;
-}
-.svg-inline--fa.fa-w-16 {
-  width: 1em;
-}
-</style>

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="about-info">
+    <section>
       <div class="relative z-0 w-full" style="z-index: -99">
         <div class="card-head-bg">
           <NuxtImg
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <section class="max-w-4xl px-8 mx-auto">
       <Header />
     </section>
@@ -123,24 +123,6 @@
     <About-Wanna-Chat />
   </main>
 </template>
-
-<style scoped>
-.bio-content,
-.bio-name {
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-  .bio {
-    padding: 1rem 1rem 0 1rem;
-  }
-}
-
-.about {
-  letter-spacing: -0.028px;
-  line-height: 1.58;
-}
-</style>
 
 
 <script>

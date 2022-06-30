@@ -32,13 +32,14 @@
     <div
       class="absolute inset-0 flex flex-col items-start object-cover w-full section-heading"
     >
-      <NuxtImg
+      <nuxt-img
         class="absolute inset-0 object-cover w-full h-full"
         :src="blok.Background.filename"
         format="webp"
-        quality="80"
+        quality="40"
         provider="storyblok"
         role="presentation"
+        loading="lazy"
         :alt="blok.Background.alt"
       />
     </div>

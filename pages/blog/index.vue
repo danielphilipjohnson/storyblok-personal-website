@@ -6,15 +6,25 @@
       :blok="story.content"
       :is="story.content.component"
     />
-    <div class="px-8 py-4 mx-auto lg:px-32 xl:px-48">
-      <div class="text-2xl font-bold text-center">
-        <header
-          class="flex flex-wrap items-center justify-between pb-6 md:pb-12"
+    <div class="container px-8 py-4 mx-auto">
+      <header class="max-w-6xl mx-auto text-2xl font-bold">
+        <h1
+          class="pb-4 mb-4 text-5xl font-bold capitalize border-b text-dark border-grey"
         >
-          <h1 class="text-5xl capitalize">Latest</h1>
-        </header>
+          Latest
+        </h1>
+      </header>
+
+      <div class="w-full p-3 mb-6 border rounded bg-badge border-grey md:mb-8">
+        <div class="text-sm leading-7">
+          <span class="font-bold">
+            ⚡ Here are my current collection of blogs
+          </span>
+          <div>
+            <p>On this page, you will see a list of my blogs.</p>
+          </div>
+        </div>
       </div>
-      
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div class="w-full pb-8 lg:pr-8" v-for="blog in blogs" :key="blog.uuid">
           <div
@@ -29,6 +39,9 @@
                   class="relative flex flex-col justify-between h-full"
                   provider="storyblok"
                   format="webp"
+                  height="640"
+                  width="1138"
+                  :alt="blog.content.cover_image.alt"
                   :src="blog.content.cover_image.filename"
                 />
               </figure>
@@ -40,9 +53,6 @@
               >
                 {{ blog.content.title }}
               </h2>
-              <p class="pb-4 text-sm text-gray-600 dark:text-gray-100">
-                {{ blog.content.intro }}
-              </p>
               <div class="flex items-center py-4">
                 <template v-if="blog.tag_list">
                   <Badges :badges="blog.tag_list" />

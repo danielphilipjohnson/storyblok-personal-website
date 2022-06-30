@@ -23,7 +23,7 @@ export default {
     ]
   },
   publicRuntimeConfig: {
-    BASE_URL: process.env.BASE_URL || 'www.danielphilipjohnson.me',
+    BASE_URL: process.env.BASE_URL || 'https://www.danielphilipjohnson.me',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

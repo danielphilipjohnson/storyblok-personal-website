@@ -33,18 +33,18 @@
             Developer links
           </h2>
 
-          <nav class="mb-4">
+          <div class="mb-4" role="navigation">
             <Link-Socials :links="developerLinks" />
-          </nav>
+          </div>
         </div>
 
         <div class="flex flex-col col-span-1 mb-8 lg:col-span-2">
           <h2 class="mb-2 mr-8 text-sm font-bold uppercase text-light-gray">
             Social links
           </h2>
-          <nav class="mb-4">
+          <div class="mb-4" role="navigation">
             <Link-Socials :links="socialLinks" />
-          </nav>
+          </div>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ module.exports = {
           alt: "#3a3c55",
         },
         highlight: "#a2a7d646",
-        secondary: "#81A05F",
+        secondary: "#556b3d",
         tricary: "#5FA07E",
         dark: "#102a43",
         light: "#1A446C",

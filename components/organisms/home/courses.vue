@@ -39,13 +39,12 @@
           <a
             class="block h-8 btn-certificate w-max"
             :href="course.Certificate_Link.url"
+            :aria-label="'View certificate for' + course.Title "
           >
             <div class="flex">
               <svg
                 aria-hidden="true"
                 focusable="false"
-                data-prefix="fas"
-                data-icon="graduation-cap"
                 class="w-4"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"

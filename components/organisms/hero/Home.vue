@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <section id="hero" class="relative bg-black">
     <NuxtImg
       class="img-bg h-banner"
       height="590"
@@ -11,7 +11,9 @@
       role="presentation"
     />
     <div class="absolute inset-0 flex flex-col justify-center px-8">
-      <h1 class="mb-4 text-4xl font-bold text-center text-white lg:text-6xl xl:text-7xl lg:mb-6">
+      <h1
+        class="mb-4 text-4xl font-bold text-center text-white lg:text-6xl xl:text-7xl lg:mb-6"
+      >
         {{ blok.first_name }}
         <span id="secondary" class="text-secondary">
           {{ blok.middle_name }}
@@ -20,7 +22,9 @@
       </h1>
 
       <div id="icons" class="icons">
-        <h2 class="max-w-4xl px-8 mx-auto mb-8 text-lg text-center text-white md:px-0 md:text-2xl">
+        <h2
+          class="max-w-4xl px-8 mx-auto mb-8 text-lg text-center text-white md:px-0 md:text-2xl"
+        >
           {{ blok.subheading }}
         </h2>
         <div id="social-icons" class="flex justify-center pb-8 text-white">
@@ -29,7 +33,7 @@
             v-for="link in blok.social_links"
             :key="link._uid"
           >
-            <div class="w-10 lg:w-14">
+            <div class="w-10 transition-colors duration-500 lg:w-14 hover:text-green-300">
               <BaseIcon
                 :icon="link.icon[0]"
                 :link="link.link.url"
@@ -50,7 +54,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
 export default {

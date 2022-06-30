@@ -1,5 +1,5 @@
 <template>
-  <section id="home" className="home">
+  <main>
     <component
       v-if="story.content.component"
       :key="story.content._uid"
@@ -7,7 +7,7 @@
       :is="story.content.component"
     />
     <CallToAction />
-  </section>
+  </main>
 </template>
 
 <script>
@@ -129,7 +129,7 @@ export default {
   head() {
     const { title, description } = this.story.content.metadata;
     const seoImage = this.story.content.seoImage;
-    const url = this.$config.BASE_URL + this.$route.path;
+    const url = this.$route.path;
 
     return {
       link: [

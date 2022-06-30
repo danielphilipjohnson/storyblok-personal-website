@@ -60,28 +60,26 @@
       <p>
         Made with
         <a
+          class="text-green-300 hover:text-green-200"
           href="https://nuxtjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          style="color: rgb(148, 200, 90)"
           >#Nuxt</a
         >,
         <a
-          class="mx-1"
+          class="mx-1 text-green-300 hover:text-green-200"
           href="https://www.storyblok.com/"
           target="_blank"
           rel="noopener noreferrer"
-          style="color: rgb(148, 200, 90)"
           >#Storyblok</a
         >
 
         and
         <a
-          class="mx-1"
+          class="mx-1 text-green-300 hover:text-green-200"
           href="https://tailwindcss.com/"
           target="_blank"
           rel="noopener noreferrer"
-          style="color: rgb(148, 200, 90)"
           >#TailwindCSS</a
         >
       </p>
@@ -229,7 +227,8 @@ export default {
           icon: "youtube",
           link: "https://www.youtube.com/c/DanielPhilipJohnson/",
           alt: "youtube of Daniel Philip Johnson",
-        }, {
+        },
+        {
           icon: "dev",
           link: "https://dev.to/danielphilipjohnson",
           alt: "dev to of Daniel Philip Johnson",

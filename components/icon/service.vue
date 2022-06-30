@@ -3,10 +3,7 @@
     <svg
       aria-hidden="true"
       focusable="false"
-      data-prefix="fas"
-      data-icon="pencil-alt"
-      class="svg-inline--fa fa-pencil-alt fa-w-16 text-primary"
-      role="img"
+      class="not-sr-only svg-inline--fa fa-pencil-alt fa-w-16 text-primary"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
     >
@@ -20,10 +17,7 @@
     <svg
       aria-hidden="true"
       focusable="false"
-      data-prefix="fas"
-      data-icon="code"
       class="w-6 text-primary"
-      role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 640 512"
     >
@@ -38,10 +32,7 @@
     <svg
       aria-hidden="true"
       focusable="false"
-      data-prefix="fas"
-      data-icon="book"
       class="w-6 text-primary"
-      role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512"
     >
@@ -55,9 +46,6 @@
   <div v-else-if="icon === 'fa-laptop-code'">
     <svg
       aria-hidden="true"
-      focusable="false"
-      data-prefix="fas"
-      data-icon="laptop-code"
       class="w-6 text-primary"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
@@ -72,9 +60,6 @@
   <div v-else-if="icon === 'fa-object-ungroup'">
     <svg
       aria-hidden="true"
-      focusable="false"
-      data-prefix="far"
-      data-icon="object-ungroup"
       class="w-6 text-primary"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
@@ -89,9 +74,6 @@
   <div v-else-if="icon === 'fa-hammer'">
     <svg
       aria-hidden="true"
-      focusable="false"
-      data-prefix="fas"
-      data-icon="hammer"
       class="w-6 text-primary"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +93,7 @@ export default {
     icon: {
       type: String,
       required: true,
-    }
+    },
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative bg-black">
     <NuxtImg
       class="img-bg h-banner"
       height="590"

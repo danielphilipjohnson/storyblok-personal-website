@@ -1,13 +1,6 @@
 <template>
   <div
-    class="
-      transition
-      duration-300
-      border
-      rounded
-      border-grey
-      hover:shadow-md hover:opacity-90
-    "
+    class="transition duration-300 border rounded border-grey hover:shadow-md hover:opacity-90"
   >
     <a
       class="block"
@@ -23,7 +16,8 @@
           v-if="image"
           class="relative flex flex-col justify-between"
           provider="storyblok"
-          format="webp"
+          format="avif"
+          loading="lazy"
           :src="image"
         />
       </figure>
@@ -31,16 +25,7 @@
 
     <figcaption class="flex flex-col px-4 pt-3 md:pt-4">
       <h2
-        class="
-          flex flex-wrap
-          items-center
-          pb-3
-          text-xl
-          font-bold
-          break-all
-          lg:text-3xl
-          md:pb-2
-        "
+        class="flex flex-wrap items-center pb-3 text-xl font-bold break-all lg:text-3xl md:pb-2"
       >
         {{ title }}
       </h2>

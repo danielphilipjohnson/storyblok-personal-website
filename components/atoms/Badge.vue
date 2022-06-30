@@ -1,7 +1,7 @@
 <template>
-  <span :class="'px-2 py-1 mr-1 text-xs text-white rounded ' + classes">{{
+  <p :class="'px-2 py-1 mr-1 text-xs rounded ' + classes">{{
     text
-  }}</span>
+  }}</p>
 </template>
 <script>
 export default {

@@ -46,7 +46,7 @@
           :content="text.content[0].text"
           :key="text._uid"
         />
-        <p v-else-if="text.type == 'paragraph'">
+        <p v-else-if="text.type == 'paragraph'" :key="text._uid">
           <template v-for="p_text in text.content">
             <RichTextRenderer :document="p_text" :key="p_text._uid" />
           </template>
@@ -54,13 +54,14 @@
         <template
           v-else-if="text.type == 'blockquote'"
           v-for="block_quote in text.content"
+          
         >
           <BlockQuote
             :text="block_quote.content[0].text"
             :key="block_quote._uid"
           />
         </template>
-        <ul v-else-if="text.type == 'bullet_list'">
+        <ul v-else-if="text.type == 'bullet_list'" :key="text._uid">
           <template v-for="p_text in text.content">
             <RichTextRenderer :document="p_text" :key="p_text._uid" />
           </template>

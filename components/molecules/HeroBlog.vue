@@ -10,6 +10,7 @@
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
+              focusable='false'
               fill="currentColor"
               class="bi bi-house"
               viewBox="0 0 16 16"
@@ -24,7 +25,7 @@
               ></path>
             </svg>
           </nuxt-link>
-          <span class="ml-4">/</span>
+          <span class="ml-4 not-sr-only">/</span>
           <span class="ml-4 ">Blog</span>
         </li>
       </ul>

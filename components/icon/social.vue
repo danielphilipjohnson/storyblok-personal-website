@@ -28,7 +28,7 @@
     target="_blank"
     rel="noreferrer"
     :aria-label="accessible_text"
-    class="p-2 text-white text-xl lg:text-2xl"
+    class="p-2 text-xl lg:text-2xl"
   >
     <svg
       fill="currentColor"
@@ -53,7 +53,7 @@
     target="_blank"
     rel="noreferrer"
     :aria-label="accessible_text"
-    class="p-2 text-white text-xl lg:text-2xl"
+    class="p-2 text-xl lg:text-2xl"
   >
     <svg
       fill="currentColor"
@@ -78,7 +78,7 @@
     target="_blank"
     rel="noreferrer"
     :aria-label="accessible_text"
-    class="p-2 text-white text-xl lg:text-2xl"
+    class="p-2 text-xl lg:text-2xl"
   >
     <svg
       fill="currentColor"
@@ -114,7 +114,7 @@
     target="_blank"
     rel="noreferrer"
     :aria-label="accessible_text"
-    class="p-2 text-white text-xl  lg:text-2xl"
+    class="p-2 text-xl lg:text-2xl"
   >
     <svg
       fill="currentColor"
@@ -137,11 +137,10 @@
     target="_blank"
     rel="noreferrer"
     :aria-label="accessible_text"
-    class="p-2 text-white text-xl lg:text-2xl"
+    class="p-2 text-xl lg:text-2xl"
   >
     <svg
       fill="currentColor"
-      
       viewBox="0 0 64 64"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -164,7 +163,7 @@
     target="_blank"
     rel="noreferrer"
     :aria-label="accessible_text"
-    class="p-2 text-white text-xl  lg:text-2xl"
+    class="p-2 text-xl lg:text-2xl"
   >
     <svg
       fill="currentColor"
@@ -183,7 +182,7 @@
   </a>
   <a
     v-else-if="icon === 'dev'"
-    class="text-white"
+    class=""
     href="https://dev.to/danielphilipjohnson"
     target="_blank"
     rel="noopener noreferrer"
@@ -205,7 +204,7 @@
   ></a>
   <a
     v-else-if="icon === 'hackerrank'"
-    class="text-white"
+    class=""
     href="https://www.hackerrank.com/daniel_p_johnson"
     target="_blank"
     rel="noopener noreferrer"
@@ -227,7 +226,7 @@
 
   <a
     v-else-if="icon === 'freecodecamp'"
-    class="text-white"
+    class=""
     href="https://www.freecodecamp.org/daniel-philip-johnson"
     target="_blank"
     rel="noopener noreferrer"
@@ -250,7 +249,7 @@
 
   <a
     v-else-if="icon === 'youtube'"
-    class="text-white"
+    class=""
     href="https://www.youtube.com/c/DanielPhilipJohnson/"
     target="_blank"
     rel="noopener noreferrer"

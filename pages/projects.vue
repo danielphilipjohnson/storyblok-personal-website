@@ -1,5 +1,5 @@
 <template>
-  <section id="work" class="work">
+  <main id="work" class="work">
     <component
       v-if="story.content.component"
       :key="story.content._uid"
@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </main>
 </template>
 
 <script>

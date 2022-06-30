@@ -1,5 +1,5 @@
 <template>
-  <section id="blog" class="blog">
+  <main id="blog" class="blog">
     <component
       v-if="story.content.component"
       :key="story.content._uid"
@@ -7,26 +7,31 @@
       :is="story.content.component"
     />
     <div class="container px-8 py-4 mx-auto">
-      <header class="text-2xl font-bold">
-        <h1
-          class="pb-4 mb-4 text-5xl font-bold capitalize border-b text-dark border-grey"
-        >
-          Latest
-        </h1>
-      </header>
+      <section>
+        <header class="text-2xl font-bold">
+          <h2
+            class="pb-4 mb-4 text-5xl font-bold capitalize border-b text-dark border-grey"
+          >
+            Latest
+          </h2>
+        </header>
 
-      <div class="w-full p-3 mb-6 border rounded bg-badge border-grey md:mb-8">
-        <div class="text-sm leading-7">
-          <span class="font-bold">
-            ⚡ Here are my current collection of blogs
-          </span>
-          <div>
-            <p>On this page, you will see a list of my blogs.</p>
+        <div
+          class="w-full p-3 mb-6 border rounded bg-badge border-grey md:mb-8"
+        >
+          <div class="text-sm leading-7">
+            <span class="font-bold">
+              ⚡ Here are my current collection of blogs
+            </span>
+            <div>
+              <p>On this page, you will see a list of my blogs.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <div class="w-full pb-8" v-for="blog in blogs" :key="blog.uuid">
+      </section>
+
+      <section class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <article class="w-full pb-8" v-for="blog in blogs" :key="blog.uuid">
           <div
             class="transition duration-300 border rounded border-grey hover:shadow-md hover:opacity-90"
           >
@@ -69,10 +74,10 @@
               </div>
             </figcaption>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
     </div>
-  </section>
+  </main>
 </template>
 <script>
 import { createSEOMeta } from "../../utils/seo";

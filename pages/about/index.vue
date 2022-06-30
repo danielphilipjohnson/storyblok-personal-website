@@ -5,12 +5,13 @@
         <div class="card-head-bg">
           <NuxtImg
             class="object-cover w-full"
-            src="linkedinBanner.png"
+            src="banner.jpeg"
             alt="linkedin banner"
             format="webp"
             width="1680"
             height="600"
             role="presentation"
+            lazy="loading"
           />
         </div>
       </div>

@@ -11,13 +11,21 @@
         class="px-3 py-3 mt-4 font-bold transition duration-500 rounded w-max bg-badge hover:shadow-md"
       >
         <span class="mr-2 raise" role="img" aria-label="my resume"> 📝 </span>
-        <a href="/cv/Daniel_Philip_Johnson.pdf" download> Resume PDF </a>
+        <a
+          href="/cv/Daniel_Philip_Johnson.pdf"
+          download
+          aria-label="This will download my resume which is a pdf"
+        >
+          Resume PDF
+        </a>
       </div>
     </div>
     <storyblokRichTextBlockQuote :text="blok.Paragraph" />
     <div class="badge-container">
       <NuxtLink to="/about">
-        <div class="px-3 py-3 mt-4 mb-2 font-bold transition duration-500 rounded w-max bg-badge hover:shadow-md slide">
+        <div
+          class="px-3 py-3 mt-4 mb-2 font-bold transition duration-500 rounded w-max bg-badge hover:shadow-md slide"
+        >
           <span role="img" aria-label="go here">👉 </span>
           If you want to know about me
         </div>

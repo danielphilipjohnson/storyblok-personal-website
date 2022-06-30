@@ -7,7 +7,7 @@
       :is="story.content.component"
     />
     <div class="container px-8 py-4 mx-auto">
-      <header class="max-w-6xl mx-auto text-2xl font-bold">
+      <header class="text-2xl font-bold">
         <h1
           class="pb-4 mb-4 text-5xl font-bold capitalize border-b text-dark border-grey"
         >
@@ -25,8 +25,8 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div class="w-full pb-8 lg:pr-8" v-for="blog in blogs" :key="blog.uuid">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="w-full pb-8" v-for="blog in blogs" :key="blog.uuid">
           <div
             class="transition duration-300 border rounded border-grey hover:shadow-md hover:opacity-90"
           >

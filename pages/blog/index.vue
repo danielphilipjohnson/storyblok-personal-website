@@ -61,7 +61,7 @@
                   class="p-1 px-2 mt-auto ml-auto text-xs font-medium leading-tight text-white uppercase duration-300 rounded cursor-pointer bg-gradient-to-r from-blue-700 to-blue-800 transition-cursor"
                   :to="'/' + blog.full_slug"
                 >
-                  Read more
+                  Read full article
                 </NuxtLink>
               </div>
             </figcaption>

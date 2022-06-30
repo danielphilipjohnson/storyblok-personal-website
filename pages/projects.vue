@@ -7,7 +7,29 @@
       :is="story.content.component"
     />
 
-    <div class="container mx-auto">
+    <div class="container mb-8">
+      <h2
+        class="pb-4 mb-4 text-5xl font-bold capitalize border-b text-dark border-grey"
+      >
+        Work Projects
+      </h2>
+      <div
+        class="flex items-center p-3 mb-8 border rounded bg-badge border-grey"
+      >
+        <div class="text-sm leading-7">
+          <span class="font-bold"> ⚡ Personal projects </span>
+          <div>
+            <p>
+              <span
+                >On this page, you will see a list of my personal projects I
+                have built and the tools I have used.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="container mx-auto">
       <div class="grid gap-8 mb-8 lg:grid-cols-2">
         <article
           class="w-full pb-8"
@@ -16,9 +38,10 @@
         >
           <div
             v-if="article.content.External_Link"
-            class="transition duration-300 border rounded border-grey hover:shadow-md hover:opacity-90"
+            class="h-full transition duration-300 border rounded border-grey hover:shadow-md hover:opacity-90"
           >
             <a
+              class="block"
               :href="article.content.External_Link.url"
               target="_blank"
               rel="noopener noreferrer"
@@ -46,35 +69,35 @@
                 class="relative flex flex-col justify-between h-full shadow-sm border-gray"
               >
                 <nuxt-picture
-                  class="relative flex flex-col justify-between h-full"
+                  class="relative h-full"
                   provider="storyblok"
                   width="760"
                   height="400"
-                  format="webp"
+                  format="avif"
                   quality="80"
                   :alt="article.content.Background_Image.alt"
                   :src="article.content.Background_Image.filename"
+                  loading="lazy"
                 />
               </figure>
+              <figcaption class="flex flex-col h-full px-4 pt-3 md:pt-4">
+                <h2
+                  class="flex flex-wrap items-center pb-1 text-xl break-all md:text-3xl md:pb-2"
+                >
+                  {{ article.name }}
+                </h2>
+                <div class="mb-4 text-sm text-gray-600 dark:text-gray-100">
+                  <storyblokRichText :text="article.content.Excerpt" />
+                </div>
+                <div class="pb-4">
+                  <project-badges :badges="article.content.Built_With" />
+                </div>
+              </figcaption>
             </a>
-
-            <figcaption class="flex flex-col px-4 pt-3 md:pt-4">
-              <h2
-                class="flex flex-wrap items-center pb-1 text-xl break-all md:text-3xl md:pb-2"
-              >
-                {{ article.name }}
-              </h2>
-              <p class="mb-4 text-sm text-gray-600 dark:text-gray-100">
-                <storyblokRichText :text="article.content.Excerpt" />
-              </p>
-              <div class="pb-4">
-                <project-badges :badges="article.content.Built_With" />
-              </div>
-            </figcaption>
           </div>
         </article>
       </div>
-    </div>
+    </section>
   </main>
 </template>
 

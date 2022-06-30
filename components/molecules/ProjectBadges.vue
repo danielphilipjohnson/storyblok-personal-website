@@ -1,5 +1,5 @@
 <template>
-  <div class="badges">
+  <div class="flex flex-wrap">
     <template v-for="logo in badges">
       <div
         class="mb-2"
@@ -202,7 +202,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   props: {
@@ -213,11 +212,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.badges {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-</style>

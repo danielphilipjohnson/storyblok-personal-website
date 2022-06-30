@@ -129,7 +129,7 @@ export default {
   head() {
     const { title, description } = this.story.content.metadata;
     const seoImage = this.story.content.seoImage;
-    const url = this.$route.path;
+    const url = this.$config.BASE_URL + this.$route.path;
 
     return {
       link: [

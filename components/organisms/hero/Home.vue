@@ -15,7 +15,7 @@
         class="mb-4 text-4xl font-bold text-center text-white lg:text-6xl xl:text-7xl lg:mb-6"
       >
         {{ blok.first_name }}
-        <span id="secondary" class="text-secondary">
+        <span id="secondary" class="text-green-200">
           {{ blok.middle_name }}
         </span>
         <span> {{ blok.last_name }}</span>

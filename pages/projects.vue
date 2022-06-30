@@ -8,7 +8,7 @@
     />
 
     <div class="flex flex-wrap items-start max-w-6xl px-8 mx-auto mb-8">
-      <div
+      <article
         class="w-full pb-8 lg:w-1/2 lg:pr-8"
         v-for="article in articles"
         :key="article._uid"
@@ -71,7 +71,7 @@
             </div>
           </figcaption>
         </div>
-      </div>
+      </article>
     </div>
   </main>
 </template>

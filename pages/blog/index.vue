@@ -43,9 +43,10 @@
                   v-if="blog.content.cover_image"
                   class="relative flex flex-col justify-between h-full"
                   provider="storyblok"
-                  format="webp"
+                  format="avif"
                   height="640"
                   width="1138"
+                  loading="lazy"
                   :alt="blog.content.title"
                   :src="blog.content.cover_image.filename"
                 />

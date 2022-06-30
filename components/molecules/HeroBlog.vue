@@ -39,7 +39,7 @@
         quality="80"
         provider="storyblok"
         role="presentation"
-        alt=""
+        :alt="blok.Background.alt"
       />
     </div>
 

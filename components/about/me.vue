@@ -21,7 +21,7 @@
       </div>
     </div>
     <storyblokRichTextBlockQuote :text="blok.Paragraph" />
-    <div class="badge-container">
+    <div class="pb-3 badge-container">
       <NuxtLink to="/about">
         <div
           class="px-3 py-3 mt-4 mb-2 font-bold transition duration-500 rounded w-max bg-badge hover:shadow-md slide"

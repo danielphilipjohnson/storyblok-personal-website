@@ -1,63 +1,34 @@
 <template>
-    <NuxtLink
+  <NuxtLink
     v-if="type === 'primary'"
-      class="
-        border border-white
-        text-white
-        mr-4
-        py-2
-        px-3
-        bg-primary
-        text-sm
-        font-bold
-        hover:opacity-75
-      "
-      :to="link"
-    >
-      {{ text }}
-    </NuxtLink>
+    class="px-3 py-2 mr-4 text-sm font-bold text-white border border-white bg-primary hover:opacity-75"
+    :to="link"
+  >
+    {{ text }}
+  </NuxtLink>
 
-    <NuxtLink
-     v-else-if="type === 'secondary'"
-      class="
-        border border-white
-        text-white
-        py-2
-        px-4
-        bg-primary-dark
-        text-sm
-        font-bold
-        hover:opacity-75
-      "
-      :to="link"
-    >
-      {{ text }}
-    </NuxtLink>
+  <NuxtLink
+    v-else-if="type === 'secondary'"
+    class="px-4 py-2 text-sm font-bold text-white border border-white bg-primary-dark hover:opacity-75"
+    :to="link"
+  >
+    {{ text }}
+  </NuxtLink>
 
-
-    <NuxtLink
+  <NuxtLink
     v-else
-      class="
-        border border-white
-        text-white
-        py-2
-        px-4
-        text-sm
-        font-bold
-        hover:opacity-75
-      "
-      :to="link"
-    >
-      {{ text }}
-    </NuxtLink>
- 
+    class="px-4 py-2 text-sm font-bold text-white border border-white hover:opacity-75"
+    :to="link"
+  >
+    {{ text }}
+  </NuxtLink>
 </template>
 
 <script>
 export default {
   props: {
     link: {
-      type: Object,
+      type: String,
       required: true,
     },
     text: {
